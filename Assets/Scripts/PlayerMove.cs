@@ -10,7 +10,7 @@ public class PlayerMove : MonoBehaviour
 	public Transform orientation;
 	private Collider playerCollider;
 	public Rigidbody rb;
-
+	public GrappleGun grappleGun;
     [Space(10)]
 
 	public LayerMask whatIsGround;
@@ -143,64 +143,84 @@ public class PlayerMove : MonoBehaviour
     //Moving around with WASD
 	private void Movement()
 	{
-		rb.AddForce(Vector3.down * Time.deltaTime * 10f);
-		Vector2 mag = FindVelRelativeToLook();
-		float num = mag.x;
-		float num2 = mag.y;
-		CounterMovement(x, y, mag);
-		if (readyToJump && jumping)
+		if (grounded || wallRunning || grappleGun.IsGrappling())
 		{
-			Jump();
+			rb.AddForce(Vector3.down * Time.deltaTime * 10f);
+			Vector2 mag = FindVelRelativeToLook();
+			float num = mag.x;
+			float num2 = mag.y;
+			CounterMovement(x, y, mag);
+			if (readyToJump && jumping)
+			{
+				Jump();
+			}
+
+			float num3 = walkSpeed;
+			if (sprinting)
+			{
+				num3 = runSpeed;
+			}
+
+			if (crouching && grounded && readyToJump)
+			{
+				rb.AddForce(Vector3.down * Time.deltaTime * 3000f);
+				return;
+			}
+
+			if (x > 0f && num > num3)
+			{
+				x = 0f;
+			}
+
+			if (x < 0f && num < 0f - num3)
+			{
+				x = 0f;
+			}
+
+			if (y > 0f && num2 > num3)
+			{
+				y = 0f;
+			}
+
+			if (y < 0f && num2 < 0f - num3)
+			{
+				y = 0f;
+			}
+
+			float num4 = 1f;
+			float num5 = 1f;
+			if (!grounded)
+			{
+				num4 = 0.5f;
+				num5 = 0.5f;
+			}
+
+			if (grounded && crouching)
+			{
+				num5 = 0f;
+			}
+
+			if (wallRunning)
+			{
+				num5 = 0.3f;
+				num4 = 0.3f;
+			}
+
+			if (surfing)
+			{
+				num4 = 0.7f;
+				num5 = 0.3f;
+			}
+
+			rb.AddForce(orientation.transform.forward * y * moveSpeed * Time.deltaTime * num4 * num5);
+			rb.AddForce(orientation.transform.right * x * moveSpeed * Time.deltaTime * num4);
 		}
-		float num3 = walkSpeed;
-		if (sprinting)
+
+		if (!grounded && !wallRunning && !grappleGun.IsGrappling())
 		{
-			num3 = runSpeed;
+			AirMovement();
 		}
-		if (crouching && grounded && readyToJump)
-		{
-			rb.AddForce(Vector3.down * Time.deltaTime * 3000f);
-			return;
-		}
-		if (x > 0f && num > num3)
-		{
-			x = 0f;
-		}
-		if (x < 0f && num < 0f - num3)
-		{
-			x = 0f;
-		}
-		if (y > 0f && num2 > num3)
-		{
-			y = 0f;
-		}
-		if (y < 0f && num2 < 0f - num3)
-		{
-			y = 0f;
-		}
-		float num4 = 1f;
-		float num5 = 1f;
-		if (!grounded)
-		{
-			num4 = 0.5f;
-			num5 = 0.5f;
-		}
-		if (grounded && crouching)
-		{
-			num5 = 0f;
-		}
-		if (wallRunning)
-		{
-			num5 = 0.3f;
-			num4 = 0.3f;
-		}
-		if (surfing)
-		{
-			num4 = 0.7f;
-			num5 = 0.3f;
-		}
-		rb.AddForce(orientation.transform.forward * y * moveSpeed * Time.deltaTime * num4 * num5);
-		rb.AddForce(orientation.transform.right * x * moveSpeed * Time.deltaTime * num4);
+		
 	}
 
     //Ready to jump again
@@ -239,6 +259,20 @@ public class PlayerMove : MonoBehaviour
         }
 	}
 
+	private void AirMovement()
+	{
+		float airSpeed = 40f;
+		float step = 20;
+		
+		Vector3 forward = new Vector3(Input.GetAxis("Vertical") * (playerCam.transform.forward.x * airSpeed), 0,
+			Input.GetAxis("Vertical") * (playerCam.transform.forward.z * airSpeed));
+		Vector3 right = new Vector3(Input.GetAxis("Horizontal") * (playerCam.transform.right.x * airSpeed), 0,
+			Input.GetAxis("Horizontal") * (playerCam.transform.right.z * airSpeed));
+
+		Vector3 target = forward + right + new Vector3(0, rb.velocity.y, 0);
+		rb.velocity = Vector3.MoveTowards(rb.velocity, target, step);
+	}
+	
     //Looking around by using your mouse
 	private void Look()
 	{

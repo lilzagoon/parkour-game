@@ -47,8 +47,7 @@ public class GrappleGun : MonoBehaviour
             float distanceFromPoint = Vector3.Distance(player.position, grapplePoint);
 
             joint.maxDistance = distanceFromPoint * 0.0f;
-            joint.minDistance = distanceFromPoint * 0.25f;
-
+            joint.minDistance = distanceFromPoint * 0.4f;
             joint.spring = 4.5f;
             joint.damper = 7f;
             joint.massScale = 4.5f;
