@@ -18,6 +18,8 @@ public class CheckPoint : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             GM.lastCheckPointPos = transform.position;
+
+            GetComponent<MeshRenderer>().material.color = Color.yellow;
         }
     }
 }
