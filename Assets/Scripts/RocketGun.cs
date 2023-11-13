@@ -6,8 +6,14 @@ using UnityEngine.Events;
 
 public class RocketGun : MonoBehaviour
 {
+    private Animator anim;
     public Camera fpsCam;
     public float range = 100f;
+
+    private void Start()
+    {
+        anim = gameObject.GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -20,6 +26,7 @@ public class RocketGun : MonoBehaviour
 
     void Shoot()
     {
+        anim.SetTrigger("firing");
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
