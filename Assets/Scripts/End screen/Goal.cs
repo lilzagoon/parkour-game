@@ -7,7 +7,8 @@ using UnityEngine;
 public class Goal : MonoBehaviour
 {
     public EndScreen endScreen;
-
+    public 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +26,9 @@ public class Goal : MonoBehaviour
         if (other.tag == "Player")
         {
             endScreen.gameObject.SetActive(true);
-            Time.timeScale = 0;
-            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
+            Time.timeScale = 0;
         }
     }
 }
