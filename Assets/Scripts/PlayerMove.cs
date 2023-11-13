@@ -62,11 +62,12 @@ public class PlayerMove : MonoBehaviour
 	private Vector3 wallNormalVector;
 	private Vector3 wallRunPos;
 	private Vector3 previousLookdir;
+	public Vector3 velo;
 
-    //Private int
+	//Private int
 	private int nw;
-    
-    //Instance
+
+	//Instance
 	public static PlayerMove Instance { get; private set; }
 
 	private void Awake()
@@ -102,6 +103,7 @@ public class PlayerMove : MonoBehaviour
 		MyInput();
         //Looking around
 		Look();
+		velo = rb.velocity;
 	}
 
     //Player input
