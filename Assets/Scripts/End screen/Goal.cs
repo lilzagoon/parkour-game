@@ -26,6 +26,8 @@ public class Goal : MonoBehaviour
         {
             endScreen.gameObject.SetActive(true);
             Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = true;
         }
     }
 }
