@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
 
     public float targetTime;
     public float currentTime;
+    public float roundedTime;
     public TextMeshProUGUI timerText;
     
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class Timer : MonoBehaviour
     void Update()
     {
         currentTime += Time.deltaTime;
-        timerText.text = (currentTime).ToString("");
+        double roundedTime=System.Math.Round(currentTime,2);
+        timerText.text = (roundedTime).ToString("");
     }
 }
