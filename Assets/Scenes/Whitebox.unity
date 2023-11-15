@@ -500,7 +500,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630887814fccf404fa7c45f97e962381, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastCheckPointPos: {x: 0, y: 0.495, z: -241.6}
 --- !u!4 &94954022
 Transform:
   m_ObjectHideFlags: 0
@@ -6142,7 +6141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f1113d19b8eeb64fa5d24f47d71aac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GM: {fileID: 94954021}
 --- !u!65 &461785925
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6231,7 +6229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed5fff4ac257f0946be7305907af4998, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GM: {fileID: 94954021}
 --- !u!1 &468941051
 GameObject:
   m_ObjectHideFlags: 0
@@ -6293,7 +6290,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!65 &468941055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6931,8 +6927,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d880bb0157a4a9e48b442dff4d7645da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 463405996}
-  GM: {fileID: 94954021}
 --- !u!65 &839814845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7373,8 +7367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d880bb0157a4a9e48b442dff4d7645da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 463405996}
-  GM: {fileID: 94954021}
 --- !u!65 &1067582504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7505,6 +7497,10 @@ PrefabInstance:
       propertyPath: maxDistance
       value: 125
       objectReference: {fileID: 0}
+    - target: {fileID: 9165045818103996864, guid: 301eb658dcf6fe8459940a895fe33167, type: 3}
+      propertyPath: plungerModel
+      value: 
+      objectReference: {fileID: 1959245304}
     - target: {fileID: 9165045818103996864, guid: 301eb658dcf6fe8459940a895fe33167, type: 3}
       propertyPath: whatIsGrapplable.m_Bits
       value: 64
@@ -7740,7 +7736,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f1113d19b8eeb64fa5d24f47d71aac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GM: {fileID: 94954021}
 --- !u!65 &1113661465
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7873,7 +7868,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!65 &1116910602
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8111,7 +8105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!65 &1154671110
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8349,7 +8342,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!65 &1162294870
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8722,7 +8714,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!65 &1275098839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9810,7 +9801,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!65 &1605080017
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10047,7 +10037,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f1113d19b8eeb64fa5d24f47d71aac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GM: {fileID: 94954021}
 --- !u!65 &1614969717
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10219,7 +10208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!65 &1706992019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10490,7 +10478,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!65 &1798938021
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10772,6 +10759,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899797631}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1959245304 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4444558461230370346, guid: 4341640b32674e644986ea1c56824d62, type: 3}
+  m_PrefabInstance: {fileID: 1394132267}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2049667404
 GameObject:
   m_ObjectHideFlags: 0

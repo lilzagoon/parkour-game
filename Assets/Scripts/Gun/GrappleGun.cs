@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GrappleGun : MonoBehaviour
 {
+    public GameObject plungerModel;
     private LineRenderer _lineRenderer;
     private Vector3 grapplePoint;
     public LayerMask whatIsGrapplable;
@@ -20,6 +21,7 @@ public class GrappleGun : MonoBehaviour
         _lineRenderer = GetComponent<LineRenderer>();
         plungerSound = GetComponent<AudioSource>();
         grappleHit = false;
+        plungerModel.SetActive(true);
     }
 
     void Update()
@@ -45,6 +47,7 @@ public class GrappleGun : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(camera.position, camera.forward, out hit, maxDistance, whatIsGrapplable))
         {
+            plungerModel.SetActive(false);
             plungerSound.PlayOneShot(GrappleClip);
             grappleHit = true;
             grapplePoint = hit.transform.position;
@@ -74,6 +77,7 @@ public class GrappleGun : MonoBehaviour
         if (grappleHit == true)
         {
             plungerSound.PlayOneShot(plungerClip);
+            plungerModel.SetActive(true);
             grappleHit = false;
         }
     }
