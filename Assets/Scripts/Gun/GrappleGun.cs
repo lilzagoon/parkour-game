@@ -11,9 +11,15 @@ public class GrappleGun : MonoBehaviour
     public Transform gunTip, camera, player;
     public float maxDistance = 30000f;
     private SpringJoint joint;
+    public AudioSource plungerSound;
+    public AudioClip plungerClip;
+    public AudioClip GrappleClip;
+    private bool grappleHit;
     private void Awake()
     {
         _lineRenderer = GetComponent<LineRenderer>();
+        plungerSound = GetComponent<AudioSource>();
+        grappleHit = false;
     }
 
     void Update()
@@ -39,6 +45,8 @@ public class GrappleGun : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(camera.position, camera.forward, out hit, maxDistance, whatIsGrapplable))
         {
+            plungerSound.PlayOneShot(GrappleClip);
+            grappleHit = true;
             grapplePoint = hit.transform.position;
             joint = player.gameObject.AddComponent<SpringJoint>();
             joint.autoConfigureConnectedAnchor = false;
@@ -53,6 +61,9 @@ public class GrappleGun : MonoBehaviour
             joint.massScale = 4.5f;
 
             _lineRenderer.positionCount = 2;
+            
+            
+            
         }
     }
 
@@ -60,6 +71,11 @@ public class GrappleGun : MonoBehaviour
     {
         _lineRenderer.positionCount = 0;
         Destroy(joint);
+        if (grappleHit == true)
+        {
+            plungerSound.PlayOneShot(plungerClip);
+            grappleHit = false;
+        }
     }
 
     void DrawRope()
