@@ -247,7 +247,7 @@ public class PlayerMove : MonoBehaviour
 		    }
 		    else if (rb.velocity.y > 0f)
 		    {
-			    rb.velocity = new Vector3(velocity.x, velocity.y / 2f, velocity.z);
+			    rb.velocity = new Vector3(velocity.x, velocity.y, velocity.z);
 		    }
 		    if (wallRunning)
 		    {

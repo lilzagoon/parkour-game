@@ -15,6 +15,7 @@ public class GrappleGun : MonoBehaviour
     public AudioSource plungerSound;
     public AudioClip plungerClip;
     public AudioClip GrappleClip;
+    public Animator rocketAnim;
     private bool grappleHit;
     private void Awake()
     {
@@ -44,6 +45,7 @@ public class GrappleGun : MonoBehaviour
     
     void StartGrapple()
     {
+        rocketAnim.enabled = false;
         RaycastHit hit;
         if (Physics.Raycast(camera.position, camera.forward, out hit, maxDistance, whatIsGrapplable))
         {
@@ -72,6 +74,7 @@ public class GrappleGun : MonoBehaviour
 
     void StopGrapple()
     {
+        rocketAnim.enabled = true;
         _lineRenderer.positionCount = 0;
         Destroy(joint);
         if (grappleHit == true)
@@ -92,6 +95,7 @@ public class GrappleGun : MonoBehaviour
 
     public bool IsGrappling()
     {
+        
         return joint != null;
     }
 

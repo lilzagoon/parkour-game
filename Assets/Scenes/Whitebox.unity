@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -500,6 +500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630887814fccf404fa7c45f97e962381, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastCheckPointPos: {x: 0, y: 0, z: 0}
 --- !u!4 &94954022
 Transform:
   m_ObjectHideFlags: 0
@@ -6175,6 +6176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f1113d19b8eeb64fa5d24f47d71aac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GM: {fileID: 94954021}
 --- !u!65 &461785925
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6194,7 +6196,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.0820155, y: 1.1226847, z: 1.6453172}
+  m_Size: {x: 69.3, y: 23.64, z: 1.6453172}
   m_Center: {x: 0.083047286, y: 0.061341096, z: 0.030907432}
 --- !u!23 &461785926
 MeshRenderer:
@@ -6203,7 +6205,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461785922}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -6263,6 +6265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed5fff4ac257f0946be7305907af4998, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GM: {fileID: 0}
 --- !u!1 &468941051
 GameObject:
   m_ObjectHideFlags: 0
@@ -6324,6 +6327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!65 &468941055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7303,6 +7307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d880bb0157a4a9e48b442dff4d7645da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 463405996}
+  GM: {fileID: 94954021}
 --- !u!65 &839814845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7382,7 +7388,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839814843}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.952164, y: -219.14586, z: 59.6156}
+  m_LocalPosition: {x: 29.952164, y: -306, z: 59.6156}
   m_LocalScale: {x: 76.96231, y: 0.93813, z: 235.38872}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7819,6 +7825,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d880bb0157a4a9e48b442dff4d7645da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 463405996}
+  GM: {fileID: 94954021}
 --- !u!65 &1067582504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7953,6 +7961,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9165045818103996864, guid: 301eb658dcf6fe8459940a895fe33167, type: 3}
+      propertyPath: rocketAnim
+      value: 
+      objectReference: {fileID: 782717367}
     - target: {fileID: 9165045818103996864, guid: 301eb658dcf6fe8459940a895fe33167, type: 3}
       propertyPath: maxDistance
       value: 125
@@ -8199,6 +8211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f1113d19b8eeb64fa5d24f47d71aac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GM: {fileID: 94954021}
 --- !u!65 &1113661465
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8218,7 +8231,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.0820155, y: 1.1226847, z: 1.6453172}
+  m_Size: {x: 86.27, y: 28.8, z: 1.6453172}
   m_Center: {x: 0.083047286, y: 0.061341096, z: 0.030907432}
 --- !u!23 &1113661466
 MeshRenderer:
@@ -8227,7 +8240,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1113661462}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -8331,6 +8344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!65 &1116910602
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8673,6 +8687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!65 &1154671110
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8910,6 +8925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!65 &1162294870
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9282,6 +9298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!65 &1275098839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10474,6 +10491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!65 &1605080017
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10710,6 +10728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f1113d19b8eeb64fa5d24f47d71aac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GM: {fileID: 94954021}
 --- !u!65 &1614969717
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10729,7 +10748,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.0820155, y: 1.1226847, z: 1.6453172}
+  m_Size: {x: 66.93, y: 31.97, z: 1.6453172}
   m_Center: {x: 0.083047286, y: 0.061341096, z: 0.030907432}
 --- !u!23 &1614969718
 MeshRenderer:
@@ -10738,7 +10757,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614969714}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -10881,6 +10900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!65 &1706992019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11151,6 +11171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!65 &1798938021
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11450,6 +11471,7 @@ GameObject:
   - component: {fileID: 2038574637}
   - component: {fileID: 2038574639}
   - component: {fileID: 2038574636}
+  - component: {fileID: 2038574640}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -11559,19 +11581,44 @@ MonoBehaviour:
   nearSign: 0
   dialogue:
     sentences:
-    - 'These are the games controls!
+    - Welcome to our lovely world! Use your left click to go through the rest of
+      this dialogue!
+    - "To move around, use the WASD keys!\r\nThose big green circles can be grappled
+      on! \nUse your left mouse button to reach them!\r"
+    - 'Use your rockets to launch yourself! Look at the ground and press your right
+      mouse button!
 
-      Press left click to continue.'
-    - "W,A,S,D to move\r\nhold left click at GREEN points to grapple \r\nto shoot
-      rocket press right click"
-    - 'Use your rockets to launch yourself!
+'
+    - 'You can wallrun on the brown rectangular walls!
 
-      Use the wall runs, grapples and
-      rockets to finish the level!'
+      Now you can use all
+      that to get through the level!'
+    - Good luck!
   signPos: {fileID: 0}
   whatisPlayer:
     serializedVersion: 2
     m_Bits: 128
+--- !u!65 &2038574640
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038574634}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.5, y: 2.81, z: 56.75}
+  m_Center: {x: 0, y: -0.06, z: 0.00012207031}
 --- !u!1 &2049667404
 GameObject:
   m_ObjectHideFlags: 0
