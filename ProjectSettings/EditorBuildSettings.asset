@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Whitebox.unity
-    guid: ca98db8481ff2644e9852ec2807d71b9
+    path: Assets/Scenes/Main Menu.unity
+    guid: af0e2aae076b1a64e803f06d7684cd19
+  - enabled: 1
+    path: Assets/Scenes/Grapple Levels/GP L1.unity
+    guid: 1aca281cf3fc709479e3ee275db3c0b0
+  - enabled: 1
+    path: Assets/Scenes/Grapple Levels/GP L2.unity
+    guid: 9cc3293b38b60c74280611bf644be354
+  - enabled: 1
+    path: Assets/Scenes/Grapple Levels/GP L3.unity
+    guid: c27297c985dd4ee499b9099f663379d5
   m_configObjects: {}

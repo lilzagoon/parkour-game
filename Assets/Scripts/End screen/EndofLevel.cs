@@ -6,15 +6,24 @@ using UnityEngine.UI;
 
 public class EndofLevel : MonoBehaviour
 {
+    public int sceneNum;
+
+    public void Next()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(sceneNum +1);
+    }
+
+
   public void Restart()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("Whitebox");
+        SceneManager.LoadScene(sceneNum);
     }
 
-    public void Quite()
+    public void Menu()
     {
-        Application.Quit();
-        Debug.Log("Quitting!");
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
     }
 }
