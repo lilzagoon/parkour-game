@@ -20,7 +20,7 @@ public class PlayerPos : MonoBehaviour
         // setting players xyz to the storted postion in the game master
         if (gameObject.tag == "Player")
         {
-            transform.position = GM.lastCheckPointPos;
+           // transform.position = GM.lastCheckPointPos;
         }
     }
 }
