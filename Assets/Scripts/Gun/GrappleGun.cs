@@ -1,10 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class GrappleGun : MonoBehaviour
 {
+    public PlayerMovementTwo pm;
     public GameObject plungerModel;
     private LineRenderer _lineRenderer;
     private Vector3 grapplePoint;
@@ -17,12 +20,26 @@ public class GrappleGun : MonoBehaviour
     public AudioClip GrappleClip;
     public Animator rocketAnim;
     private bool grappleHit;
+
+    [Header("Air Movement")] 
+    public Transform orientation;
+    public Rigidbody rb;
+    public float horizontalThrustForce;
+    public float forwardThrustForce;
+    public float extendCableSpeed;
+
+    [Header("Prediction")] 
+    public RaycastHit predictionHit;
+    public float predictionSphereCastRadius;
+    public Transform predictionPoint;
+    
     private void Awake()
     {
         _lineRenderer = GetComponent<LineRenderer>();
         plungerSound = GetComponent<AudioSource>();
         grappleHit = false;
         plungerModel.SetActive(true);
+        pm = player.GetComponent<PlayerMovementTwo>();
     }
 
     void Update()
@@ -36,6 +53,10 @@ public class GrappleGun : MonoBehaviour
         {
             StopGrapple();
         }
+        
+        if (joint != null) AirMovement();
+        
+        CheckForSwingPoints();
     }
 
     void LateUpdate()
@@ -45,35 +66,30 @@ public class GrappleGun : MonoBehaviour
     
     void StartGrapple()
     {
+        predictionPoint.gameObject.SetActive(false);
+        pm.swinging = true;
         rocketAnim.enabled = false;
-        RaycastHit hit;
-        if (Physics.Raycast(camera.position, camera.forward, out hit, maxDistance, whatIsGrapplable))
-        {
-            plungerModel.SetActive(false);
-            plungerSound.PlayOneShot(GrappleClip);
-            grappleHit = true;
-            grapplePoint = hit.transform.position;
-            joint = player.gameObject.AddComponent<SpringJoint>();
-            joint.autoConfigureConnectedAnchor = false;
-            joint.connectedAnchor = grapplePoint;
 
-            float distanceFromPoint = Vector3.Distance(player.position, grapplePoint);
+        if (predictionHit.point == Vector3.zero) return;
+        
+        plungerModel.SetActive(false);
+        plungerSound.PlayOneShot(GrappleClip);
+        grappleHit = true;
+        grapplePoint = predictionHit.transform.position;
+        joint = player.gameObject.AddComponent<SpringJoint>();
+        joint.autoConfigureConnectedAnchor = false;
+        joint.connectedAnchor = grapplePoint;
+            
+        joint.spring = 4.5f;
+        joint.damper = 7f;
+        joint.massScale = 4.5f;
 
-            joint.maxDistance = distanceFromPoint * 0.0f;
-            joint.minDistance = distanceFromPoint * 0.4f;
-            joint.spring = 4.5f;
-            joint.damper = 7f;
-            joint.massScale = 4.5f;
-
-            _lineRenderer.positionCount = 2;
-            
-            
-            
-        }
+        _lineRenderer.positionCount = 2;
     }
 
     void StopGrapple()
     {
+        pm.swinging = false;
         rocketAnim.enabled = true;
         _lineRenderer.positionCount = 0;
         Destroy(joint);
@@ -85,12 +101,16 @@ public class GrappleGun : MonoBehaviour
         }
     }
 
+    private Vector3 currentGrapplePosition;
+    
     void DrawRope()
     {
         if (!joint) return;
+
+        currentGrapplePosition = Vector3.Lerp(currentGrapplePosition, grapplePoint, Time.deltaTime * 8f);
         
         _lineRenderer.SetPosition(0, gunTip.position);
-        _lineRenderer.SetPosition(1, grapplePoint);
+        _lineRenderer.SetPosition(1, currentGrapplePosition);
     }
 
     public bool IsGrappling()
@@ -102,5 +122,73 @@ public class GrappleGun : MonoBehaviour
     public Vector3 GetGrapplePoint()
     {
         return grapplePoint;
+    }
+
+    void AirMovement()
+    {
+        
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        float verticalInput = Input.GetAxisRaw("Vertical");
+        
+        if (Input.GetKey(KeyCode.D)) rb.AddForce(orientation.right * horizontalThrustForce * Time.deltaTime);
+        if (Input.GetKey(KeyCode.A)) rb.AddForce(-orientation.right * horizontalThrustForce * Time.deltaTime);
+        if (Input.GetKey(KeyCode.W)) rb.AddForce(orientation.forward * forwardThrustForce*Time.deltaTime);
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Vector3 directionToPoint = grapplePoint - transform.position;
+            rb.AddForce(directionToPoint.normalized * forwardThrustForce * Time.deltaTime);
+
+            float distanceFromPoint = Vector3.Distance(transform.position, grapplePoint);
+            
+            joint.maxDistance = distanceFromPoint * 0.0f;
+            joint.minDistance = distanceFromPoint * 0.4f;
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            float extendedDistanceFromPoint = Vector3.Distance(transform.position, grapplePoint) + extendCableSpeed;
+            
+            joint.maxDistance = extendedDistanceFromPoint * 0.0f;
+            joint.minDistance = extendedDistanceFromPoint * 0.4f;
+        }
+    }
+
+    void CheckForSwingPoints()
+    {
+        if (joint != null) return;
+
+        RaycastHit sphereCastHit;
+        Physics.SphereCast(camera.position, predictionSphereCastRadius, camera.forward, out sphereCastHit, maxDistance,
+            whatIsGrapplable);
+
+        RaycastHit raycastHit;
+        Physics.Raycast(camera.position, camera.forward, out raycastHit, maxDistance, whatIsGrapplable);
+
+        Vector3 realHitPoint;
+        
+        //Check 1 - Direct Hit
+        if (raycastHit.point != Vector3.zero)
+            realHitPoint = raycastHit.point;
+        
+        //Check 2 - Predicted Hit
+        else if (sphereCastHit.point != Vector3.zero)
+            realHitPoint = sphereCastHit.point;
+
+        //Check 3 - No Hit
+        else realHitPoint = Vector3.zero;
+        
+        
+        if (realHitPoint != Vector3.zero && joint == null)
+        {
+            predictionPoint.gameObject.SetActive(true);
+            predictionPoint.position = realHitPoint;
+        }
+
+        else
+        {
+            predictionPoint.gameObject.SetActive(false);
+        }
+
+        predictionHit = raycastHit.point == Vector3.zero ? sphereCastHit : raycastHit;
     }
 }

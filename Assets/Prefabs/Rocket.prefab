@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 960534963063685426}
   - component: {fileID: 7395747676266206616}
   - component: {fileID: 3547405416388168330}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2204341018133720952}
   m_LocalRotation: {x: 0.7071066, y: -0, z: -0, w: 0.70710707}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -0.15698999, y: 0.108899586, z: 0.16199417}
+  m_LocalScale: {x: 0.38040248, y: 0.2638746, z: 0.3925281}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
