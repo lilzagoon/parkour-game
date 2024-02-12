@@ -19,6 +19,8 @@ public class DialogueManager : MonoBehaviour
     private AudioSource audioSource;
    
     public TextMeshProUGUI dialogueText;
+
+    public GameObject tesxtBox;
     
     private Queue<string> sentences;
  
@@ -84,6 +86,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
+        tesxtBox.SetActive(false);
         Debug.Log("end of conversation");
     }
 }
