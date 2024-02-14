@@ -3946,6 +3946,7 @@ MonoBehaviour:
     - WASD to move.
     - Space bar to jump.
     - Hold shift to sprint.
+    - Press I to open the pause menu.
   dialogueManager: {fileID: 207953162}
 --- !u!23 &1013515747
 MeshRenderer:
