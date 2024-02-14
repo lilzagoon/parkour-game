@@ -50,6 +50,8 @@ public class PlayerMovementTwo : MonoBehaviour
     float horizontalInput;
     float verticalInput;
 
+    public ParticleSystem animeLines;
+    
     Vector3 moveDirection;
 
     Rigidbody rb;
@@ -72,6 +74,7 @@ public class PlayerMovementTwo : MonoBehaviour
     public bool swinging;
     private void Start()
     {
+        Time.timeScale = 1.0f;
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
@@ -100,7 +103,10 @@ public class PlayerMovementTwo : MonoBehaviour
             rb.drag = groundDrag;
         else
             rb.drag = 0;
-        
+
+        if (moveSpeed > 42) animeLines.Play();
+        else animeLines.Stop();
+
     }
 
     private void FixedUpdate()

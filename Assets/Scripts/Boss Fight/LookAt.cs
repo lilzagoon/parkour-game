@@ -10,6 +10,7 @@ public class LookAt : MonoBehaviour
     public float speed = 1f;
     public float time = 0;
     public float timmer = 0.005f;
+    public Vector3 tempTarget;
 
     public Coroutine Look;
 
@@ -17,7 +18,8 @@ public class LookAt : MonoBehaviour
     {
         StartRot();
 
-        tarLook.position = target.position;
+        tempTarget = new Vector3(target.position.x, 0f, target.position.z);
+        tarLook.position = tempTarget;
 
         if (time >= timmer)
         {

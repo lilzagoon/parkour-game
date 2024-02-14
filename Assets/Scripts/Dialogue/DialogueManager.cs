@@ -16,7 +16,7 @@ public class DialogueManager : MonoBehaviour
     
     [SerializeField] private bool stopAudio;
    
-    private AudioSource audioSource;
+    public AudioSource audioSource;
    
     public TextMeshProUGUI dialogueText;
 

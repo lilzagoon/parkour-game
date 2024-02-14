@@ -1001,6 +1001,9 @@ MonoBehaviour:
   whatIsGrapplable:
     serializedVersion: 2
     m_Bits: 64
+  whatIsNPC:
+    serializedVersion: 2
+    m_Bits: 0
   gunTip: {fileID: 4129396047964136292}
   camera: {fileID: 4129396047392464351}
   player: {fileID: 4129396048688012197}
@@ -1009,6 +1012,7 @@ MonoBehaviour:
   plungerClip: {fileID: 8300000, guid: ad9b4ecfff9aad247b3bcabb0634447c, type: 3}
   GrappleClip: {fileID: 8300000, guid: 2b454c4ab5e24c14698f0efe3018dcd7, type: 3}
   rocketAnim: {fileID: 5079575835269983916}
+  dialogueTrigger: {fileID: 0}
   orientation: {fileID: 4129396048173162713}
   rb: {fileID: 4129396048688012198}
   horizontalThrustForce: 3000
@@ -1016,6 +1020,7 @@ MonoBehaviour:
   extendCableSpeed: 30
   predictionSphereCastRadius: 3
   predictionPoint: {fileID: 0}
+  cursorTransform: {fileID: 0}
 --- !u!114 &4129396048673054429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1203,7 +1208,7 @@ Transform:
   - {fileID: 4129396047655348942}
   - {fileID: 4129396047398544385}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4129396048688012194
 MeshFilter:
@@ -1321,6 +1326,7 @@ MonoBehaviour:
   maxSlopeAngle: 40
   isOnSlope: 0
   orientation: {fileID: 4129396048173162713}
+  animeLines: {fileID: 5079575834560459944}
   state: 0
   sprinting: 0
   dashing: 0
