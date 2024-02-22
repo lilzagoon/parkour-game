@@ -72,6 +72,10 @@ public class PlayerMovementTwo : MonoBehaviour
     public bool dashing;
     public bool wallrunning;
     public bool swinging;
+
+    public List<GameObject> coinsList = new List<GameObject>();
+    public int coins = 0;
+    
     private void Start()
     {
         Time.timeScale = 1.0f;
@@ -80,10 +84,20 @@ public class PlayerMovementTwo : MonoBehaviour
 
         readyToJump = true;
         startYScale = transform.localScale.y;
+        
+        DontDestroyOnLoad(this.gameObject);
     }
 
     private void Update()
     {
+        foreach (GameObject gameObject in coinsList)
+        {
+            if (gameObject.activeSelf)
+            {
+                gameObject.SetActive(false);
+            }
+        }
+        
         // ground check
         if (groundContact > 0)
         {

@@ -9,9 +9,10 @@ public class Respawn : MonoBehaviour
     public GameObject player;
     public GameMaster GM;
 
-    void start()
+    void Start()
     {
         GM = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void OnTriggerEnter (Collider other)

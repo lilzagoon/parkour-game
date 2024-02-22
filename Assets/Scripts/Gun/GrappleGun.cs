@@ -23,23 +23,20 @@ public class GrappleGun : MonoBehaviour
     private bool grappleHit;
     public DialogueTrigger dialogueTrigger;
     private bool lookingAtNPC;
-    
 
-    [Header("Air Movement")] 
-    public Transform orientation;
+
+    [Header("Air Movement")] public Transform orientation;
     public Rigidbody rb;
     public float horizontalThrustForce;
     public float forwardThrustForce;
     public float extendCableSpeed;
 
-    [Header("Prediction")] 
-    public RaycastHit predictionHit;
+    [Header("Prediction")] public RaycastHit predictionHit;
     public float predictionSphereCastRadius;
     public Transform predictionPoint;
     private bool cursorLook;
-    public RectTransform cursorTransform;
 
-    
+
     private void Awake()
     {
         _lineRenderer = GetComponent<LineRenderer>();
@@ -49,6 +46,7 @@ public class GrappleGun : MonoBehaviour
         pm = player.GetComponent<PlayerMovementTwo>();
         cursorLook = false;
         lookingAtNPC = false;
+        DontDestroyOnLoad(predictionPoint);
     }
 
     void Update()
@@ -57,7 +55,7 @@ public class GrappleGun : MonoBehaviour
         {
             StartGrapple();
         }
-        
+
         else if (Input.GetMouseButtonUp(0))
         {
             StopGrapple();
@@ -67,19 +65,19 @@ public class GrappleGun : MonoBehaviour
         {
             dialogueTrigger.TriggerDialogue();
         }
-        
+
         if (joint != null) AirMovement();
-        
+
         CheckForSwingPoints();
         CursorCheck();
-        dialogueCheck();
+        //dialogueCheck();
     }
 
     void LateUpdate()
     {
         DrawRope();
     }
-    
+
     void StartGrapple()
     {
         predictionPoint.gameObject.SetActive(false);
@@ -87,7 +85,7 @@ public class GrappleGun : MonoBehaviour
         rocketAnim.enabled = false;
 
         if (predictionHit.point == Vector3.zero) return;
-        
+
         plungerModel.SetActive(false);
         plungerSound.PlayOneShot(GrappleClip);
         grappleHit = true;
@@ -95,7 +93,7 @@ public class GrappleGun : MonoBehaviour
         joint = player.gameObject.AddComponent<SpringJoint>();
         joint.autoConfigureConnectedAnchor = false;
         joint.connectedAnchor = grapplePoint;
-            
+
         joint.spring = 4.5f;
         joint.damper = 7f;
         joint.massScale = 4.5f;
@@ -118,20 +116,20 @@ public class GrappleGun : MonoBehaviour
     }
 
     private Vector3 currentGrapplePosition;
-    
+
     void DrawRope()
     {
         if (!joint) return;
 
         currentGrapplePosition = Vector3.Lerp(currentGrapplePosition, grapplePoint, Time.deltaTime * 8f);
-        
+
         _lineRenderer.SetPosition(0, gunTip.position);
         _lineRenderer.SetPosition(1, currentGrapplePosition);
     }
 
     public bool IsGrappling()
     {
-        
+
         return joint != null;
     }
 
@@ -142,20 +140,20 @@ public class GrappleGun : MonoBehaviour
 
     void AirMovement()
     {
-        
+
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
-        
+
         if (Input.GetKey(KeyCode.D)) rb.AddForce(orientation.right * horizontalThrustForce * Time.deltaTime);
         if (Input.GetKey(KeyCode.A)) rb.AddForce(-orientation.right * horizontalThrustForce * Time.deltaTime);
-        if (Input.GetKey(KeyCode.W)) rb.AddForce(orientation.forward * forwardThrustForce*Time.deltaTime);
+        if (Input.GetKey(KeyCode.W)) rb.AddForce(orientation.forward * forwardThrustForce * Time.deltaTime);
         if (Input.GetKey(KeyCode.Space))
         {
             Vector3 directionToPoint = grapplePoint - transform.position;
             rb.AddForce(directionToPoint.normalized * forwardThrustForce * Time.deltaTime);
 
             float distanceFromPoint = Vector3.Distance(transform.position, grapplePoint);
-            
+
             joint.maxDistance = distanceFromPoint * 0.0f;
             joint.minDistance = distanceFromPoint * 0.4f;
         }
@@ -163,7 +161,7 @@ public class GrappleGun : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             float extendedDistanceFromPoint = Vector3.Distance(transform.position, grapplePoint) + extendCableSpeed;
-            
+
             joint.maxDistance = extendedDistanceFromPoint * 0.0f;
             joint.minDistance = extendedDistanceFromPoint * 0.4f;
         }
@@ -181,19 +179,19 @@ public class GrappleGun : MonoBehaviour
         Physics.Raycast(camera.position, camera.forward, out raycastHit, maxDistance, whatIsGrapplable);
 
         Vector3 realHitPoint;
-        
+
         //Check 1 - Direct Hit
         if (raycastHit.point != Vector3.zero)
             realHitPoint = raycastHit.point;
-        
+
         //Check 2 - Predicted Hit
         else if (sphereCastHit.point != Vector3.zero)
             realHitPoint = sphereCastHit.point;
 
         //Check 3 - No Hit
         else realHitPoint = Vector3.zero;
-        
-        
+
+
         if (realHitPoint != Vector3.zero && joint == null)
         {
             predictionPoint.gameObject.SetActive(true);
@@ -220,29 +218,30 @@ public class GrappleGun : MonoBehaviour
             cursorLook = false;
         }
 
-        if (cursorLook == true)
-        {
-            cursorTransform.eulerAngles = new Vector3(0, 0, 45);
-        }
-        else
-        {
-            cursorTransform.eulerAngles = new Vector3(0, 0, 0);
-        }
-    }
-
-    void dialogueCheck()
-    {
-
-        RaycastHit npcHit;
-        if (Physics.Raycast(camera.position, camera.forward, out npcHit, 10, whatIsNPC))
-        {
-            lookingAtNPC = true;
-            cursorTransform.eulerAngles = new Vector3(0, 0, 45);
-        }
-        else
-        {
-            lookingAtNPC = false;
-            cursorTransform.eulerAngles = new Vector3(0, 0, 0);
-        }
+        // if (cursorLook == true)
+        // {
+        //     cursorTransform.eulerAngles = new Vector3(0, 0, 45);
+        // }
+        // else
+        // {
+        //     cursorTransform.eulerAngles = new Vector3(0, 0, 0);
+        // }
     }
 }
+
+/*void dialogueCheck()
+{
+
+    RaycastHit npcHit;
+    if (Physics.Raycast(camera.position, camera.forward, out npcHit, 10, whatIsNPC))
+    {
+        lookingAtNPC = true;
+        cursorTransform.eulerAngles = new Vector3(0, 0, 45);
+    }
+    else
+    {
+        lookingAtNPC = false;
+        cursorTransform.eulerAngles = new Vector3(0, 0, 0);
+    }
+}
+}*/
