@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Rocket Levels/RL L2.unity
     guid: b88615d66f659f74a8011f42d1bee811
   - enabled: 1
-    path: Assets/Scenes/Teleport Levels/T L1.unity
+    path: Assets/Scenes/Final Level.unity
     guid: 1bb0f12dcda025c4788784c1fc80d9ee
   - enabled: 1
     path: Assets/Scenes/Chain Strike Levels/RL L1.unity

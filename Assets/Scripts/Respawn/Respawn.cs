@@ -11,7 +11,7 @@ public class Respawn : MonoBehaviour
 
     void Start()
     {
-        GM = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+       // GM = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
