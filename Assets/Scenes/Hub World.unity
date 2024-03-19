@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630887814fccf404fa7c45f97e962381, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastCheckPointPos: {x: 3.14, y: -3, z: -6.6}
+  lastCheckPointPos: {x: 3.14, y: 5.5, z: -6.6}
   player: {fileID: 0}
   pm: {fileID: 0}
 --- !u!4 &94954022
@@ -499,7 +499,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94954020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.8, y: -1.1, z: -1.6}
+  m_LocalPosition: {x: 3.14, y: 5.5, z: -6.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28557,7 +28557,6 @@ MonoBehaviour:
   minPitch: 0.5
   maxPitch: 3
   stopAudio: 0
-  audioSource: {fileID: 0}
   dialogueText: {fileID: 1665494132}
   tesxtBox: {fileID: 691578127}
 --- !u!4 &2040579870
