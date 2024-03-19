@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 5079575835032281351}
   - component: {fileID: 5079575835032281349}
   - component: {fileID: 5079575835493195164}
+  - component: {fileID: 7635928497143324191}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -204,7 +205,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4129396047392464348}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -5956306769139555361, guid: 439911fdd7573a340b36ce187bd00abb, type: 2}
   m_audioClip: {fileID: 8300000, guid: a55bbf0920a38174497e46b9752430d4, type: 3}
@@ -312,6 +313,19 @@ MonoBehaviour:
   player: {fileID: 0}
   regularFov: 75
   speedFov: 95
+--- !u!114 &7635928497143324191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4129396047392464348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &4129396047398544398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,7 +1034,6 @@ MonoBehaviour:
   extendCableSpeed: 30
   predictionSphereCastRadius: 3
   predictionPoint: {fileID: 0}
-  cursorTransform: {fileID: 0}
 --- !u!114 &4129396048673054429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1184,6 +1197,8 @@ GameObject:
   - component: {fileID: 5079575834412760246}
   - component: {fileID: 5079575835460215704}
   - component: {fileID: 5079575835460215784}
+  - component: {fileID: 8596446001325496480}
+  - component: {fileID: 2848995075743200714}
   m_Layer: 7
   m_Name: Player 1
   m_TagString: Player
@@ -1332,6 +1347,8 @@ MonoBehaviour:
   dashing: 0
   wallrunning: 0
   swinging: 0
+  coinsList: []
+  coins: 0
 --- !u!114 &5079575835460215783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1492,6 +1509,68 @@ MonoBehaviour:
   throwForce: 20
   throwUpwardForce: 1
   readyToThrow: 0
+--- !u!114 &8596446001325496480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4129396048688012205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1634856882
+      Data2: 1188883132
+      Data3: 1073874822
+      Data4: 1729813852
+    Path: event:/SFX/Wind
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &2848995075743200714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4129396048688012205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1541591944
+      Data2: 1109982452
+      Data3: -18248789
+      Data4: -1446882730
+    Path: event:/Music/Music
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &5079575834389984819
 GameObject:
   m_ObjectHideFlags: 0

@@ -87,7 +87,7 @@ public class GrappleGun : MonoBehaviour
         if (predictionHit.point == Vector3.zero) return;
 
         plungerModel.SetActive(false);
-        plungerSound.PlayOneShot(GrappleClip);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Rope");
         grappleHit = true;
         grapplePoint = predictionHit.transform.position;
         joint = player.gameObject.AddComponent<SpringJoint>();
@@ -109,7 +109,7 @@ public class GrappleGun : MonoBehaviour
         Destroy(joint);
         if (grappleHit == true)
         {
-            plungerSound.PlayOneShot(plungerClip);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Suction Cup");
             plungerModel.SetActive(true);
             grappleHit = false;
         }

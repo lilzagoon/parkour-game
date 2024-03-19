@@ -89,6 +89,7 @@ public class Dashing : MonoBehaviour
             rb.velocity = Vector3.zero;
         
         rb.AddForce(delayedForceToApply, ForceMode.Impulse);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/dash");
     }
     void ResetDash()
     {

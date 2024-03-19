@@ -16,7 +16,7 @@ public class DialogueManager : MonoBehaviour
     
     [SerializeField] private bool stopAudio;
    
-    public AudioSource audioSource;
+    //public AudioSource audioSource;
    
     public TextMeshProUGUI dialogueText;
 
@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
-        audioSource = this.gameObject.AddComponent<AudioSource>();
+        //audioSource = this.gameObject.AddComponent<AudioSource>();
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -77,10 +77,11 @@ public class DialogueManager : MonoBehaviour
         {
             if (stopAudio)
             {
-                audioSource.Stop();
+                //audioSource.Stop();
             }
-            audioSource.pitch = Random.Range(minPitch, maxPitch);
-            audioSource.PlayOneShot(dialogueTtpingSound);
+           // audioSource.pitch = Random.Range(minPitch, maxPitch);
+           // audioSource.PlayOneShot(dialogueTtpingSound);
+           FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Dialogue Noise");
         }
     }
 

@@ -45,7 +45,7 @@ public class DialogueTrigger : MonoBehaviour
         isInRange = false;
         Debug.Log("Mouse is no longer on GameObject.");
         sign.SetActive(false);
-        dm.audioSource.Stop();
+        //dm.audioSource.Stop();
     }
 }
 

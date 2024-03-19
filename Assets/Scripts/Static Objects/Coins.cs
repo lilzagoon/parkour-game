@@ -27,6 +27,7 @@ public class Coins : MonoBehaviour
     {
         pm.coinsList.Add(this.gameObject);
         pm.coins++;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Collectable");
         this.gameObject.SetActive(false);
     }
 }
