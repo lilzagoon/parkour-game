@@ -356,6 +356,11 @@ public class PlayerMovementTwo : MonoBehaviour
             groundContact++;
             Debug.Log("Increasing ground contact!)");
         }
+
+        if (other.gameObject.tag == "Boss")
+        {
+            Debug.Log("Being hit!");
+        }
     }
 
     private void OnTriggerExit(Collider other)
