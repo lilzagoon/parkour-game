@@ -417,20 +417,20 @@ MonoBehaviour:
   SharedLibraryUpdateStage: 0
   SharedLibraryTimeSinceStart: 0
   CurrentVersion: 131616
-  HideSetupWizard: 0
+  HideSetupWizard: 1
   LastEventReferenceScanVersion: 131616
   Platforms:
+  - {fileID: -8134493636147526186}
+  - {fileID: -7728344478064728276}
+  - {fileID: -6093579033911549078}
+  - {fileID: -3603615175728753532}
   - {fileID: -1327558887485878510}
-  - {fileID: 6617675839380879381}
-  - {fileID: 4366881741050841997}
   - {fileID: 1062503571206806607}
   - {fileID: 1469364120410335590}
-  - {fileID: -8134493636147526186}
-  - {fileID: -3603615175728753532}
-  - {fileID: -6093579033911549078}
+  - {fileID: 4366881741050841997}
   - {fileID: 6486816566150096057}
+  - {fileID: 6617675839380879381}
   - {fileID: 7629872261762525339}
-  - {fileID: -7728344478064728276}
   MigratedPlatforms: 0c000000150000000b0000000a00000009000000120000000800000005000000060000000200000001000000
 --- !u!114 &1062503571206806607
 MonoBehaviour:
@@ -794,15 +794,15 @@ MonoBehaviour:
     HasValue: 0
   displaySortOrder: 0
   childIdentifiers:
-  - c88d16e5272a4e241b0ef0ac2e53b73d
+  - e7a046c753c3c3d4aacc91f6597f310d
+  - 2fea114e74ecf3c4f920e1d5cc1c4c40
+  - b7716510a1f36934c87976f3a81dbf3d
+  - 52eb9df5db46521439908db3a29a1bbb
   - fd7c55dab0fce234b8c25f6ffca523c1
   - 2c5177b11d81d824dbb064f9ac8527da
-  - e7a046c753c3c3d4aacc91f6597f310d
-  - 52eb9df5db46521439908db3a29a1bbb
-  - b7716510a1f36934c87976f3a81dbf3d
+  - c88d16e5272a4e241b0ef0ac2e53b73d
   - 0f8eb3f400726694eb47beb1a9f94ce8
   - 46fbfdf3fc43db0458918377fd40293e
-  - 2fea114e74ecf3c4f920e1d5cc1c4c40
   codecChannels:
     Value: []
     HasValue: 0
