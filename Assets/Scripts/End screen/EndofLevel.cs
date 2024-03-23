@@ -13,6 +13,7 @@ public class EndofLevel : MonoBehaviour
     public void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        sceneNum = SceneManager.GetActiveScene().buildIndex;
     }
 
     public void Next()
