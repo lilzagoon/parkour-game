@@ -31,8 +31,8 @@ public class Dashing : MonoBehaviour
     public float dashCd;
     private float dashCdTimer;
 
-    [Header("Input")] 
-    public KeyCode dashKey = KeyCode.Q;
+    // [Header("Input")] 
+    // public KeyCode dashKey = KeyCode.Q;
     
     void Start()
     {
@@ -42,7 +42,7 @@ public class Dashing : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(dashKey))
+        if (Input.GetButtonDown("Dash"))
         {
             Dash();
         }

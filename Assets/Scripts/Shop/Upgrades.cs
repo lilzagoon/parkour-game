@@ -10,10 +10,15 @@ public class Upgrades : MonoBehaviour
     public GameObject player;
     public PlayerMovementTwo pm;
     private bool canSell = false;
+    private Dashing _dashing;
+    private GrappleGun _grappleGun;
+    
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         pm = player.GetComponent<PlayerMovementTwo>();
+        _dashing = player.GetComponent<Dashing>();
+        _grappleGun = player.GetComponentInChildren<GrappleGun>();
     }
 
     // Update is called once per frame
@@ -22,6 +27,24 @@ public class Upgrades : MonoBehaviour
         if (canSell == true && Input.GetKeyDown(KeyCode.J))
         {
             Sale();
+            canSell = false;
+        }
+
+        if (canSell == true && Input.GetKeyDown(KeyCode.O))
+        {
+            DashUpgrade();
+            canSell = false;
+        }
+
+        if (canSell == true && Input.GetKeyDown(KeyCode.P))
+        {
+            BombUpgrade();
+            canSell = false;
+        }
+
+        if (canSell == true && Input.GetKeyDown(KeyCode.L))
+        {
+            GrappleUpgrade();
             canSell = false;
         }
     }
@@ -38,6 +61,27 @@ public class Upgrades : MonoBehaviour
         {
             canSell = true;
         }
+    }
+
+    private void DashUpgrade()
+    {
+        pm.coins -= 3;
+        Debug.Log("Upgraded Dash!");
+        _dashing.dashDuration += 20;
+    }
+
+    void BombUpgrade()
+    {
+        pm.coins -= 3;
+        Debug.Log("Upgraded Bomb!");
+    }
+
+    void GrappleUpgrade()
+    {
+        pm.coins -= 3;
+        _grappleGun.maxDistance += 10f;
+        _grappleGun.forwardThrustForce += 10f;
+        Debug.Log("Upgraded Grapple!");
     }
 
     private void OnTriggerExit(Collider other)

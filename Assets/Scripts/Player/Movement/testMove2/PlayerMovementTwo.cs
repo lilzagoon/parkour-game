@@ -134,7 +134,7 @@ public class PlayerMovementTwo : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical");
 
         // when to jump
-        if(Input.GetKey(jumpKey) && readyToJump && grounded)
+        if(Input.GetButtonDown("Jump") && readyToJump && grounded)
         {
             readyToJump = false;
 
@@ -143,18 +143,18 @@ public class PlayerMovementTwo : MonoBehaviour
             Invoke(nameof(ResetJump), jumpCooldown);
         }
         
-        //crouching
-        if (Input.GetKeyDown(crouchKey))
-        {
-            transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
-            rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
-        }
-        
-        //uncrouching
-        if (Input.GetKeyUp(crouchKey))
-        {
-            transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
-        }
+        // //crouching
+        // if (Input.GetKeyDown(crouchKey))
+        // {
+        //     transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
+        //     rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
+        // }
+        //
+        // //uncrouching
+        // if (Input.GetKeyUp(crouchKey))
+        // {
+        //     transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
+        // }
     }
 
     private float desiredMoveSpeed;
