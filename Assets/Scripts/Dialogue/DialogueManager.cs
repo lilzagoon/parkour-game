@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private float maxPitch = 3f;
     
     [SerializeField] private bool stopAudio;
+    private bool yapping = false;
    
     //public AudioSource audioSource;
    
@@ -23,6 +24,8 @@ public class DialogueManager : MonoBehaviour
     public GameObject tesxtBox;
     
     private Queue<string> sentences;
+
+    private int maxChar;
  
     void Start()
     {
@@ -45,19 +48,33 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+      
+
+        if (yapping == true)
+        {
+            
+            dialogueText.maxVisibleCharacters = 9000;
+            yapping = false;
+            return;
+        }
+        else if (yapping == false)
+        {
+            string sentence = sentences.Dequeue();
+            StopAllCoroutines();
+            maxChar = dialogueText.maxVisibleCharacters;
+            StartCoroutine(TypeSentence(sentence));
+        }
+
         if (sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
-
-        string sentence = sentences.Dequeue();
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
     }
 
     IEnumerator TypeSentence (string sentence)
     {
+        yapping = true;
         dialogueText.text = "";
         dialogueText.maxVisibleCharacters = 0;
         //reveals characters 1 by 1.
@@ -68,6 +85,9 @@ public class DialogueManager : MonoBehaviour
             dialogueText.maxVisibleCharacters++;
             yield return new WaitForSeconds(0.04f);
         }
+        Debug.Log("Stop Yapping");
+        yapping = false;
+    
     }
 
     private void PlayDialogueSound(int currentDisplayedCharacterCount)
