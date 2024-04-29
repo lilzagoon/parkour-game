@@ -12,6 +12,7 @@ public class Upgrades : MonoBehaviour
     private bool canSell = false;
     private Dashing _dashing;
     private GrappleGun _grappleGun;
+    public float speedBonus;
     
     void Start()
     {
@@ -26,33 +27,40 @@ public class Upgrades : MonoBehaviour
     {
         if (canSell == true && Input.GetKeyDown(KeyCode.J))
         {
-            Sale();
+            MoveSpeedSale();
+            canSell = false;
+        }
+        
+        if (canSell == true && Input.GetKeyDown(KeyCode.K))
+        {
+            JumpUpgrade();
             canSell = false;
         }
 
-        if (canSell == true && Input.GetKeyDown(KeyCode.O))
-        {
-            DashUpgrade();
-            canSell = false;
-        }
-
-        if (canSell == true && Input.GetKeyDown(KeyCode.P))
-        {
-            BombUpgrade();
-            canSell = false;
-        }
-
-        if (canSell == true && Input.GetKeyDown(KeyCode.L))
-        {
-            GrappleUpgrade();
-            canSell = false;
-        }
+        // if (canSell == true && Input.GetKeyDown(KeyCode.O))
+        // {
+        //     DashUpgrade();
+        //     canSell = false;
+        // }
+        //
+        // if (canSell == true && Input.GetKeyDown(KeyCode.P))
+        // {
+        //     BombUpgrade();
+        //     canSell = false;
+        // }
+        //
+        // if (canSell == true && Input.GetKeyDown(KeyCode.L))
+        // {
+        //     GrappleUpgrade();
+        //     canSell = false;
+        // }
     }
 
-    void Sale()
+    void MoveSpeedSale()
     {
         pm.coins-=3;
-        Debug.Log("Sale made!");
+        pm.movementUpgrades++;
+        Debug.Log("Movement Speed Sale made!");
     }
 
     private void OnTriggerStay(Collider other)
@@ -68,6 +76,13 @@ public class Upgrades : MonoBehaviour
         pm.coins -= 3;
         Debug.Log("Upgraded Dash!");
         _dashing.dashDuration += 20;
+    }
+
+    private void JumpUpgrade()
+    {
+        pm.coins -= 3;
+        Debug.Log("Upgraded Jump!");
+        pm.jumpUpgrades++;
     }
 
     void BombUpgrade()

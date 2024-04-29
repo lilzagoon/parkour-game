@@ -17,11 +17,15 @@ public class PlayerMovementTwo : MonoBehaviour
     public int groundContact = 0;
     public float wallrunningSpeed;
     public float swingSpeed;
+    public float movementUpgrades;
+    public float speedBonus;
     
     [Header("Jumping")]
     public float jumpForce;
     public float jumpCooldown;
     public float airMultiplier;
+    public float jumpBonus;
+    public float jumpUpgrades;
     bool readyToJump;
 
     [Header("Crouching")] 
@@ -217,7 +221,9 @@ public class PlayerMovementTwo : MonoBehaviour
             else 
                 desiredMoveSpeed = sprintSpeed;
         }
-
+        
+        desiredMoveSpeed = desiredMoveSpeed * 1 + (speedBonus * movementUpgrades);
+        
         bool desiredMoveSpeedHasChanged = desiredMoveSpeed != lastDesiredMoveSpeed;
         if (lastState == MovementState.dashing) keepMomentum = true;
 
@@ -236,6 +242,7 @@ public class PlayerMovementTwo : MonoBehaviour
         
         lastDesiredMoveSpeed = desiredMoveSpeed;
         lastState = state;
+        
     }
 
     private float speedChangeFactor;
@@ -325,7 +332,7 @@ public class PlayerMovementTwo : MonoBehaviour
         // reset y velocity
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
-        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+        rb.AddForce(transform.up * (jumpForce * 1 + (jumpBonus + jumpUpgrades)), ForceMode.Impulse);
     }
     private void ResetJump()
     {
