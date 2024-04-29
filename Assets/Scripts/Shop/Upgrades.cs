@@ -12,6 +12,7 @@ public class Upgrades : MonoBehaviour
     private bool canSell = false;
     private Dashing _dashing;
     private GrappleGun _grappleGun;
+    private Shoot _shoot;
     public float speedBonus;
     
     void Start()
@@ -20,6 +21,7 @@ public class Upgrades : MonoBehaviour
         pm = player.GetComponent<PlayerMovementTwo>();
         _dashing = player.GetComponent<Dashing>();
         _grappleGun = player.GetComponentInChildren<GrappleGun>();
+        _shoot = player.GetComponentInChildren<Shoot>();
     }
 
     // Update is called once per frame
@@ -37,23 +39,23 @@ public class Upgrades : MonoBehaviour
             canSell = false;
         }
 
-        // if (canSell == true && Input.GetKeyDown(KeyCode.O))
-        // {
-        //     DashUpgrade();
-        //     canSell = false;
-        // }
-        //
-        // if (canSell == true && Input.GetKeyDown(KeyCode.P))
-        // {
-        //     BombUpgrade();
-        //     canSell = false;
-        // }
-        //
-        // if (canSell == true && Input.GetKeyDown(KeyCode.L))
-        // {
-        //     GrappleUpgrade();
-        //     canSell = false;
-        // }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            DashUpgrade();
+            canSell = false;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            BombUpgrade();
+            canSell = false;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            GrappleUpgrade();
+            canSell = false;
+        }
     }
 
     void MoveSpeedSale()
@@ -87,6 +89,7 @@ public class Upgrades : MonoBehaviour
 
     void BombUpgrade()
     {
+        _shoot.bombCd -= 1;
         pm.coins -= 3;
         Debug.Log("Upgraded Bomb!");
     }
