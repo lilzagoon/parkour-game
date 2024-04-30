@@ -17,11 +17,15 @@ public class PlayerMovementTwo : MonoBehaviour
     public int groundContact = 0;
     public float wallrunningSpeed;
     public float swingSpeed;
+    public float movementUpgrades;
+    public float speedBonus;
     
     [Header("Jumping")]
     public float jumpForce;
     public float jumpCooldown;
     public float airMultiplier;
+    public float jumpBonus;
+    public float jumpUpgrades;
     bool readyToJump;
 
     [Header("Crouching")] 
@@ -134,7 +138,7 @@ public class PlayerMovementTwo : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical");
 
         // when to jump
-        if(Input.GetKey(jumpKey) && readyToJump && grounded)
+        if(Input.GetButtonDown("Jump") && readyToJump && grounded)
         {
             readyToJump = false;
 
@@ -143,18 +147,18 @@ public class PlayerMovementTwo : MonoBehaviour
             Invoke(nameof(ResetJump), jumpCooldown);
         }
         
-        //crouching
-        if (Input.GetKeyDown(crouchKey))
-        {
-            transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
-            rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
-        }
-        
-        //uncrouching
-        if (Input.GetKeyUp(crouchKey))
-        {
-            transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
-        }
+        // //crouching
+        // if (Input.GetKeyDown(crouchKey))
+        // {
+        //     transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
+        //     rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
+        // }
+        //
+        // //uncrouching
+        // if (Input.GetKeyUp(crouchKey))
+        // {
+        //     transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
+        // }
     }
 
     private float desiredMoveSpeed;
@@ -217,7 +221,9 @@ public class PlayerMovementTwo : MonoBehaviour
             else 
                 desiredMoveSpeed = sprintSpeed;
         }
-
+        
+        desiredMoveSpeed = desiredMoveSpeed * 1 + (speedBonus * movementUpgrades);
+        
         bool desiredMoveSpeedHasChanged = desiredMoveSpeed != lastDesiredMoveSpeed;
         if (lastState == MovementState.dashing) keepMomentum = true;
 
@@ -236,6 +242,7 @@ public class PlayerMovementTwo : MonoBehaviour
         
         lastDesiredMoveSpeed = desiredMoveSpeed;
         lastState = state;
+        
     }
 
     private float speedChangeFactor;
@@ -325,7 +332,7 @@ public class PlayerMovementTwo : MonoBehaviour
         // reset y velocity
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
-        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+        rb.AddForce(transform.up * (jumpForce * 1 + (jumpBonus + jumpUpgrades)), ForceMode.Impulse);
     }
     private void ResetJump()
     {

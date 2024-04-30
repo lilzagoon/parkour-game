@@ -34,18 +34,24 @@ public class DialogueTrigger : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        isInRange = true;
-        Debug.Log(".in");
-        TriggerDialogue();
-        sign.SetActive(true);
+        if (other.tag == "Player")
+        {
+            isInRange = true;
+            Debug.Log(".in");
+            TriggerDialogue();
+            sign.SetActive(true);
+        }
     }
 
     void OnTriggerExit(Collider other)
     {
-        isInRange = false;
-        Debug.Log("Mouse is no longer on GameObject.");
-        sign.SetActive(false);
-        //dm.audioSource.Stop();
+        if (other.tag == "Player")
+        {
+            isInRange = false;
+            Debug.Log("Mouse is no longer on GameObject.");
+            sign.SetActive(false);
+            //dm.audioSource.Stop();
+        }
     }
 }
 
