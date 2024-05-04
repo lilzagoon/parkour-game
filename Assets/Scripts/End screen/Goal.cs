@@ -25,6 +25,7 @@ public class Goal : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Victory");
             endScreen.gameObject.SetActive(true);
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
