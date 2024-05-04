@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 7395747676266206616, guid: 03e9b11a9e0ca974c8735562c256df40, type: 3}
   speed: 50
+  bombCd: 0
 --- !u!1 &4129396047392464348
 GameObject:
   m_ObjectHideFlags: 0
@@ -1325,9 +1326,13 @@ MonoBehaviour:
   groundContact: 0
   wallrunningSpeed: 20
   swingSpeed: 80
+  movementUpgrades: 0
+  speedBonus: 10
   jumpForce: 35
   jumpCooldown: 0.25
   airMultiplier: 0.4
+  jumpBonus: 15
+  jumpUpgrades: 0
   crouchSpeed: 5
   crouchYScale: 1
   startYScale: 1.5
@@ -1408,7 +1413,6 @@ MonoBehaviour:
   disableGravity: 1
   resetVel: 1
   dashCd: 3
-  dashKey: 113
 --- !u!114 &4129396048688012199
 MonoBehaviour:
   m_ObjectHideFlags: 0
