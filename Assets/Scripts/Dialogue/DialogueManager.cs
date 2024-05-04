@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour
     
     [SerializeField] private bool stopAudio;
     private bool yapping = false;
+    public bool boar = false;
    
     //public AudioSource audioSource;
    
@@ -99,9 +100,16 @@ public class DialogueManager : MonoBehaviour
             {
                 //audioSource.Stop();
             }
-           // audioSource.pitch = Random.Range(minPitch, maxPitch);
-           // audioSource.PlayOneShot(dialogueTtpingSound);
-           FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Dialogue Noise");
+            // audioSource.pitch = Random.Range(minPitch, maxPitch);
+            // audioSource.PlayOneShot(dialogueTtpingSound);
+            if (boar == false)
+            { 
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Dialogue Noise");
+            }
+            else
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/BoarBeep");
+            }
         }
     }
 
