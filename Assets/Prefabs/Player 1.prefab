@@ -1327,11 +1327,11 @@ MonoBehaviour:
   wallrunningSpeed: 20
   swingSpeed: 80
   movementUpgrades: 0
-  speedBonus: 0
+  speedBonus: 10
   jumpForce: 35
   jumpCooldown: 0.25
   airMultiplier: 0.4
-  jumpBonus: 0
+  jumpBonus: 15
   jumpUpgrades: 0
   crouchSpeed: 5
   crouchYScale: 1
