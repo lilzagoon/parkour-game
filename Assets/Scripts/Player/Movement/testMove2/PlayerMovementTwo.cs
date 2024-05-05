@@ -60,6 +60,10 @@ public class PlayerMovementTwo : MonoBehaviour
 
     Rigidbody rb;
 
+    private GrappleGun _grappleGun;
+    private Dashing _dashing;
+    private Shoot _shoot;
+    
     public MovementState state;
     public enum MovementState
     {
@@ -82,6 +86,10 @@ public class PlayerMovementTwo : MonoBehaviour
     
     private void Start()
     {
+        _grappleGun = GetComponentInChildren<GrappleGun>();
+        _dashing = GetComponent<Dashing>();
+        _shoot = GetComponentInChildren<Shoot>();
+        
         Time.timeScale = 1.0f;
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
@@ -376,5 +384,24 @@ public class PlayerMovementTwo : MonoBehaviour
         {
             groundContact--;
         }
+    }
+    
+    public void GrappleUpgrade()
+    {
+        _grappleGun.maxDistance += 10f;
+        _grappleGun.forwardThrustForce += 10f;
+        Debug.Log("Upgraded Grapple!");
+    }
+    
+    public void DashUpgrade()
+    {
+        Debug.Log("Upgraded Dash!");
+        _dashing.dashDuration += 20;
+    }
+    
+    public void BombUpgrade()
+    {
+        _shoot.bombCd -= 1;
+        Debug.Log("Upgraded Bomb!");
     }
 }
