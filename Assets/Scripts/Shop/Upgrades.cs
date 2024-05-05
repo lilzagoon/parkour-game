@@ -41,16 +41,21 @@ public class Upgrades : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.O))
         {
-            //DashUpgrade();
+            DashUpgrade();
             canSell = false;
         }
         
         if (Input.GetKeyDown(KeyCode.P))
         {
-            //BombUpgrade();
+            BombUpgrade();
             canSell = false;
         }
         
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            GrappleUpgrade();
+            canSell = false;
+        }
     }
 
     void MoveSpeedSale()
@@ -67,7 +72,13 @@ public class Upgrades : MonoBehaviour
             canSell = true;
         }
     }
-    
+
+    private void DashUpgrade()
+    {
+        pm.coins -= 3;
+        Debug.Log("Upgraded Dash!");
+        _dashing.dashDuration += 0.25f;
+    }
 
     private void JumpUpgrade()
     {
@@ -75,7 +86,21 @@ public class Upgrades : MonoBehaviour
         Debug.Log("Upgraded Jump!");
         pm.jumpUpgrades++;
     }
-    
+
+    void BombUpgrade()
+    {
+        _shoot.bombCd -= 1;
+        pm.coins -= 3;
+        Debug.Log("Upgraded Bomb!");
+    }
+
+    void GrappleUpgrade()
+    {
+        pm.coins -= 3;
+        _grappleGun.maxDistance += 25f;
+        _grappleGun.forwardThrustForce += 30f;
+        Debug.Log("Upgraded Grapple!");
+    }
 
     private void OnTriggerExit(Collider other)
     {

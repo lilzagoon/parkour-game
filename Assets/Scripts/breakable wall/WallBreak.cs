@@ -10,6 +10,7 @@ public class WallBreak : MonoBehaviour
     {
         if (other.gameObject.layer == 10)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Wall crumble");
             Instantiate(destroyedVersion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
