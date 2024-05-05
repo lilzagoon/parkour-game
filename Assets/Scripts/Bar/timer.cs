@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class timer : MonoBehaviour
 {
+    public GameObject slider;
     public Slider timerSlider;
     public GameObject player;
     public PlayerMovementTwo pm;
@@ -24,18 +25,19 @@ public class timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timerSlider.value >= 3f)
+        if (timerSlider.value >= timerSlider.maxValue)
         {
+            slider.SetActive(false);
             if (Input.GetButtonDown("Dash"))
             {
+                slider.SetActive(true);
                 timerSlider.value = 0f;
             }
         }
 
-        if (timerSlider.value <= 3f)
+        if (timerSlider.value <= timerSlider.maxValue)
         {
             timerSlider.value += Time.deltaTime;
         }
-
     }
 }
