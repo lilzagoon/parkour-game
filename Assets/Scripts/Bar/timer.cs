@@ -39,7 +39,7 @@ public class timer : MonoBehaviour
         {
             timerSlider.value += Time.deltaTime;
         } else if (timerSlider.value <= timerSlider.maxValue)
-            timerSlider.value += Time.deltaTime / 5;
+            timerSlider.value += Time.deltaTime / 4;
         
     }
 }

@@ -57,7 +57,7 @@ public class Dashing : MonoBehaviour
         if (dashCdTimer > 0 && pm.grounded)
             dashCdTimer -= Time.deltaTime;
         else if (dashCdTimer > 0)
-            dashCdTimer -= Time.deltaTime / 5;
+            dashCdTimer -= Time.deltaTime / 4;
     }
 
     private void Dash()
