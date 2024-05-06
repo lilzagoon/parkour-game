@@ -2253,6 +2253,7 @@ MonoBehaviour:
   dialogue:
     sentences:
     - You can use a Dash by pressing Q to lunch you in the way your looking.
+    - 
   dialogueManager: {fileID: 207953162}
 --- !u!1 &396111847
 GameObject:
@@ -2324,8 +2325,9 @@ MonoBehaviour:
   dialogue:
     sentences:
     - You can fire out a Rocket by pressing Right Click.
-    - You can lunch yourself by aiming it at a wall or the floor!
+    - You can launch yourself by aiming it at a wall or the floor!
     - Once you get past this we will be able to go to the grove and be safe.
+    - 
   dialogueManager: {fileID: 207953162}
 --- !u!1 &435445330
 GameObject:
@@ -17721,6 +17723,7 @@ MonoBehaviour:
     - Ok so you see the thing above me, thats a grapple point.
     - If you aim at it and are in range you can Left Click to hook on.
     - You will know your in range because an orb will appear!
+    - 
   dialogueManager: {fileID: 207953162}
 --- !u!1 &1818491157
 GameObject:
@@ -18221,6 +18224,7 @@ MonoBehaviour:
     - 'If you want to run hold Shift. '
     - And you can open up your pause menu by pressing I.
     - Oh and if you see a blue wall just know you can run on them.
+    - 
   dialogueManager: {fileID: 207953162}
 --- !u!1 &2003706887 stripped
 GameObject:
