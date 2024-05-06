@@ -113,7 +113,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void EndDialogue()
+    public void EndDialogue()
     {
         tesxtBox.SetActive(false);
         Debug.Log("end of conversation");

@@ -1556,6 +1556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!4 &265516340 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8806183432015641064, guid: 8345b9538c206b3468fb3d8628cc9c64, type: 3}
@@ -2252,6 +2253,7 @@ MonoBehaviour:
   dialogue:
     sentences:
     - You can use a Dash by pressing Q to lunch you in the way your looking.
+    - 
   dialogueManager: {fileID: 207953162}
 --- !u!1 &396111847
 GameObject:
@@ -2323,8 +2325,9 @@ MonoBehaviour:
   dialogue:
     sentences:
     - You can fire out a Rocket by pressing Right Click.
-    - You can lunch yourself by aiming it at a wall or the floor!
+    - You can launch yourself by aiming it at a wall or the floor!
     - Once you get past this we will be able to go to the grove and be safe.
+    - 
   dialogueManager: {fileID: 207953162}
 --- !u!1 &435445330
 GameObject:
@@ -4628,6 +4631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!4 &1004181024 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ae06e5bdd8f6c2247a90b14783015ed6, type: 3}
@@ -4833,6 +4837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!1 &1008098083
 GameObject:
   m_ObjectHideFlags: 0
@@ -5093,6 +5098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!1001 &1115085445
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5708,6 +5714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!4 &1313915997 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ae06e5bdd8f6c2247a90b14783015ed6, type: 3}
@@ -6279,6 +6286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!1001 &1456035155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6815,6 +6823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!1001 &1568894079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12355,6 +12364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!4 &1637412110 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ae06e5bdd8f6c2247a90b14783015ed6, type: 3}
@@ -12505,6 +12515,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2848995075743200714, guid: a4f9b10ad0037ef4d84ab6b2ae1782a5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4129396047318473529, guid: a4f9b10ad0037ef4d84ab6b2ae1782a5, type: 3}
       propertyPath: bombCd
       value: 3
@@ -12849,6 +12863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!1 &1736583557
 GameObject:
   m_ObjectHideFlags: 0
@@ -17968,6 +17983,7 @@ MonoBehaviour:
     - Ok so you see the thing above me, thats a grapple point.
     - If you aim at it and are in range you can Left Click to hook on.
     - You will know your in range because an orb will appear!
+    - 
   dialogueManager: {fileID: 207953162}
 --- !u!1 &1818491157
 GameObject:
@@ -18468,6 +18484,7 @@ MonoBehaviour:
     - 'If you want to run hold Shift. '
     - And you can open up your pause menu by pressing I.
     - Oh and if you see a blue wall just know you can run on them.
+    - 
   dialogueManager: {fileID: 207953162}
 --- !u!1 &2003706887 stripped
 GameObject:
@@ -18703,6 +18720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!1 &2111046373
 GameObject:
   m_ObjectHideFlags: 0
@@ -18846,6 +18864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!1001 &1343259936845825376
 PrefabInstance:
   m_ObjectHideFlags: 0

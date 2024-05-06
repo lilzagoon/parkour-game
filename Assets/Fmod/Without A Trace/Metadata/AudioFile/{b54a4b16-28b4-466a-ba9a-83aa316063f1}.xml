@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b54a4b16-28b4-466a-ba9a-83aa316063f1}">
+		<property name="assetPath">
+			<value>cartoon-slide-whistle-down-2-176648.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.248</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{81519d62-3903-4384-a2eb-88f9e45f9ac7}</destination>
+		</relationship>
+	</object>
+</objects>
