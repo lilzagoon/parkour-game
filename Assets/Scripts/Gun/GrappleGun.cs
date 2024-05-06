@@ -49,6 +49,12 @@ public class GrappleGun : MonoBehaviour
         DontDestroyOnLoad(predictionPoint);
     }
 
+    public void Recalculate (int upgrades)
+    {
+        maxDistance = 30000 + (10 * upgrades);
+        forwardThrustForce = 2000 + (10 * upgrades);
+    }
+
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))

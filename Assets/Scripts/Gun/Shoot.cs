@@ -6,14 +6,22 @@ public class Shoot : MonoBehaviour
     public Rigidbody projectile;
     public float speed = 200;
     public float bombCd;
+    private float maxCd;
     private float bombCdTimer;
     private RocketGun _rocketGun;
 
     void Start()
     {
-        bombCdTimer = bombCd;
+        maxCd = bombCd;
+        bombCdTimer = maxCd;
         _rocketGun = GameObject.Find("Plunger").GetComponent<RocketGun>();
     }
+
+    public void Recalculate (int upgrades)
+    {
+        maxCd = bombCd - upgrades;
+    }
+
     void Update ()
     {
         if (bombCdTimer > 0)
@@ -24,7 +32,7 @@ public class Shoot : MonoBehaviour
             _rocketGun.anim.SetTrigger("mouse2");
             Rigidbody instantiatedProjectile = Instantiate(projectile,transform.position,transform.rotation)as Rigidbody;
             instantiatedProjectile.velocity = transform.TransformDirection(new Vector3(0, 0,speed));
-            bombCdTimer = bombCd;
+            bombCdTimer = maxCd;
         }
     }
 }

@@ -17,6 +17,7 @@ public class Dashing : MonoBehaviour
     public float dashUpwardForce;
     public float maxDashYSpeed;
     public float dashDuration;
+    private float finalDuration;
 
     [Header("Dashing")] 
     public PlayerCam cam;
@@ -29,7 +30,7 @@ public class Dashing : MonoBehaviour
     
     [Header("Cooldown")] 
     public float dashCd;
-    private float dashCdTimer;
+    public float dashCdTimer;
 
     // [Header("Input")] 
     // public KeyCode dashKey = KeyCode.Q;
@@ -38,6 +39,12 @@ public class Dashing : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         pm = GetComponent<PlayerMovementTwo>();
+        finalDuration = dashDuration;
+    }
+
+    public void Recalculate (int upgrades)
+    {
+        finalDuration = dashDuration + (20 * upgrades);
     }
 
     private void Update()
@@ -47,8 +54,10 @@ public class Dashing : MonoBehaviour
             Dash();
         }
 
-        if (dashCdTimer > 0)
+        if (dashCdTimer > 0 && pm.grounded)
             dashCdTimer -= Time.deltaTime;
+        else if (dashCdTimer > 0)
+            dashCdTimer -= Time.deltaTime / 5;
     }
 
     private void Dash()
@@ -77,7 +86,7 @@ public class Dashing : MonoBehaviour
         delayedForceToApply = forceToApply;
         Invoke(nameof(DelayedDashForce), 0.025f);
         
-        Invoke(nameof(ResetDash), dashDuration);
+        Invoke(nameof(ResetDash), finalDuration);
     }
 
     private Vector3 delayedForceToApply;

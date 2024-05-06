@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
 
-public class PlayerMovementTwo : MonoBehaviour
+public class PlayerMovementTwo : MonoBehaviour, IDataPersistence
 {
     [Header("Movement")]
     public float moveSpeed;
@@ -49,6 +49,12 @@ public class PlayerMovementTwo : MonoBehaviour
     private bool exitingSlope;
     public bool isOnSlope;
 
+    [Header("Upgrades")]
+    public int grappleUpgrades;
+    public int dashUpgrades;
+    public int bombUpgrades;
+
+    [Header("Misc")]
     public Transform orientation;
 
     float horizontalInput;
@@ -81,7 +87,7 @@ public class PlayerMovementTwo : MonoBehaviour
     public bool wallrunning;
     public bool swinging;
 
-    public List<GameObject> coinsList = new List<GameObject>();
+    public List<string> coinsList = new List<string>();
     public int coins = 0;
     
     private void Start()
@@ -100,15 +106,38 @@ public class PlayerMovementTwo : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+    public void LoadData(GameData data)
+    {
+
+        this.coinsList = data.coinsList;
+        this.coins = data.coins;
+
+        _grappleGun = GetComponentInChildren<GrappleGun>();
+        _dashing = GetComponent<Dashing>();
+        _shoot = GetComponentInChildren<Shoot>();
+
+        this.grappleUpgrades = data.grappleUpgrades;
+        _grappleGun.Recalculate(this.grappleUpgrades);
+
+        this.dashUpgrades = data.dashUpgrades;
+        _dashing.Recalculate(this.dashUpgrades);
+
+        this.bombUpgrades = data.bombUpgrades;
+        _shoot.Recalculate(this.bombUpgrades);
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.coinsList = this.coinsList;
+        data.coins = this.coins;
+
+        data.grappleUpgrades = this.grappleUpgrades;
+        data.dashUpgrades = this.dashUpgrades;
+        data.bombUpgrades = this.bombUpgrades;
+    }
+
     private void Update()
     {
-        foreach (GameObject gameObject in coinsList)
-        {
-            if (gameObject.activeSelf)
-            {
-                gameObject.SetActive(false);
-            }
-        }
         
         // ground check
         if (groundContact > 0)
@@ -388,20 +417,22 @@ public class PlayerMovementTwo : MonoBehaviour
     
     public void GrappleUpgrade()
     {
-        _grappleGun.maxDistance += 25f;
-        _grappleGun.forwardThrustForce += 750f;
+        grappleUpgrades++;
+        _grappleGun.Recalculate(grappleUpgrades);
         Debug.Log("Upgraded Grapple!");
     }
     
     public void DashUpgrade()
     {
+        dashUpgrades++;
+        _dashing.Recalculate(dashUpgrades);
         Debug.Log("Upgraded Dash!");
-        _dashing.dashDuration += 0.25f;
     }
     
     public void BombUpgrade()
     {
-        _shoot.bombCd -= 1;
+        bombUpgrades++;
+        _shoot.Recalculate(bombUpgrades);
         Debug.Log("Upgraded Bomb!");
     }
 }

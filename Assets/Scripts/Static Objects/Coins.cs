@@ -3,8 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coins : MonoBehaviour
+public class Coins : MonoBehaviour, IDataPersistence
 {
+    [SerializeField] private string id;
+    [ContextMenu("Generate guid for id")]
+    private void GenerateGuid()
+    {
+        id = System.Guid.NewGuid().ToString();
+    }
 
     public PlayerMovementTwo pm;
 
@@ -17,6 +23,18 @@ public class Coins : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+    public void LoadData(GameData data)
+    {
+        if(data.coinsList.Contains(this.id))
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
+    public void SaveData(ref GameData data)
+    {
+
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -25,7 +43,7 @@ public class Coins : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        pm.coinsList.Add(this.gameObject);
+        pm.coinsList.Add(this.id);
         pm.coins++;
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Collectable");
         this.gameObject.SetActive(false);
