@@ -3428,7 +3428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8806183432015641064, guid: 8345b9538c206b3468fb3d8628cc9c64, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.19
+      value: 20.53
       objectReference: {fileID: 0}
     - target: {fileID: 8806183432015641064, guid: 8345b9538c206b3468fb3d8628cc9c64, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3436,7 +3436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8806183432015641064, guid: 8345b9538c206b3468fb3d8628cc9c64, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 52.7
+      value: 57.66
       objectReference: {fileID: 0}
     - target: {fileID: 8806183432015641064, guid: 8345b9538c206b3468fb3d8628cc9c64, type: 3}
       propertyPath: m_LocalRotation.w
@@ -21376,7 +21376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 545513034002404126, guid: bd725bf830ac35144aa63187181ad701, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 56.5
+      value: 57.1
       objectReference: {fileID: 0}
     - target: {fileID: 545513034002404126, guid: bd725bf830ac35144aa63187181ad701, type: 3}
       propertyPath: m_LocalRotation.w
@@ -22153,6 +22153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endScreen: {fileID: 338780488}
+  player: {fileID: 0}
+  pm: {fileID: 0}
 --- !u!65 &1449341264
 BoxCollider:
   m_ObjectHideFlags: 0
