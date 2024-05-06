@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 7395747676266206616, guid: 03e9b11a9e0ca974c8735562c256df40, type: 3}
   speed: 50
-  bombCd: 0
+  bombCd: 2
 --- !u!1 &4129396047392464348
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,6 +1060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e6db1bac561f84ca25fac5f33faef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   fpsCam: {fileID: 4129396047392464337}
   range: 100
 --- !u!82 &659386083128824207
