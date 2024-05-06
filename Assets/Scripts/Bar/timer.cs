@@ -35,9 +35,11 @@ public class timer : MonoBehaviour
             }
         }
 
-        if (timerSlider.value <= timerSlider.maxValue)
+        if (timerSlider.value <= timerSlider.maxValue && pm.grounded)
         {
             timerSlider.value += Time.deltaTime;
-        }
+        } else if (timerSlider.value <= timerSlider.maxValue)
+            timerSlider.value += Time.deltaTime / 5;
+        
     }
 }
