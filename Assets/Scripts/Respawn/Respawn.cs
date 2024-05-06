@@ -19,6 +19,7 @@ public class Respawn : MonoBehaviour
     {
         if (other.transform.tag == "Player")
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Death");
             player.transform.position = GM.lastCheckPointPos;   
         }
     }
