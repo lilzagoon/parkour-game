@@ -12364,6 +12364,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4129396048688012205, guid: a4f9b10ad0037ef4d84ab6b2ae1782a5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5079575835460215711, guid: a4f9b10ad0037ef4d84ab6b2ae1782a5, type: 3}
       propertyPath: jumpBonus
       value: 5
