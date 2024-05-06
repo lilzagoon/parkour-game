@@ -27,33 +27,15 @@ public class Upgrades : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canSell == true && Input.GetKeyDown(KeyCode.J))
+        if (canSell == true && Input.GetKeyDown(KeyCode.O))
         {
             MoveSpeedSale();
             canSell = false;
         }
         
-        if (canSell == true && Input.GetKeyDown(KeyCode.K))
+        if (canSell == true && Input.GetKeyDown(KeyCode.P))
         {
             JumpUpgrade();
-            canSell = false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            DashUpgrade();
-            canSell = false;
-        }
-        
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            BombUpgrade();
-            canSell = false;
-        }
-        
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            GrappleUpgrade();
             canSell = false;
         }
     }
@@ -67,7 +49,7 @@ public class Upgrades : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && pm.coins >= 3)
         {
             canSell = true;
         }

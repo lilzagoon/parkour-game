@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class RocketGun : MonoBehaviour
 {
-    private Animator anim;
+    public Animator anim;
     public Camera fpsCam;
     public float range = 100f;
 
@@ -26,7 +26,6 @@ public class RocketGun : MonoBehaviour
 
     void Shoot()
     {
-        anim.SetTrigger("mouse2");
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {

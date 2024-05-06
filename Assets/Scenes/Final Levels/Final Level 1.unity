@@ -838,6 +838,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endScreen: {fileID: 338780488}
+  player: {fileID: 0}
+  pm: {fileID: 0}
 --- !u!65 &123351695
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21955,7 +21957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4129396048688012205, guid: a4f9b10ad0037ef4d84ab6b2ae1782a5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5079575835460215711, guid: a4f9b10ad0037ef4d84ab6b2ae1782a5, type: 3}
       propertyPath: jumpUpgrades
