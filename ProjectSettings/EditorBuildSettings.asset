@@ -43,7 +43,7 @@ EditorBuildSettings:
     guid: ca40e90bfce852943b795b6944b5b64a
   - enabled: 1
     path: Assets/Scenes/Final Levels/Final Level 1.unity
-    guid: 6d3143d4fea78b247a2b0cdd533b4a11
+    guid: dcf0055404e615a4fbc4f2a9d6699334
   - enabled: 1
     path: Assets/Scenes/Final Levels/Final Level 2.unity
     guid: 2177180e019d26e4992ca302901c387c
@@ -52,11 +52,5 @@ EditorBuildSettings:
     guid: 1bb0f12dcda025c4788784c1fc80d9ee
   - enabled: 1
     path: Assets/Scenes/Final Levels/Kill that guy.unity
-    guid: 2a34a1cf2a760f54fb18d349b801558f
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/Boss.unity
-    guid: cf772e3a5f8cdda47b34e35dfa0bbf3e
+    guid: fd3b7e3614927b14e97c503dd9e5584a
   m_configObjects: {}

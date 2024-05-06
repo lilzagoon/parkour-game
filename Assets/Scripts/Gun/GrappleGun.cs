@@ -81,11 +81,11 @@ public class GrappleGun : MonoBehaviour
     void StartGrapple()
     {
         predictionPoint.gameObject.SetActive(false);
-        pm.swinging = true;
         rocketAnim.enabled = false;
 
         if (predictionHit.point == Vector3.zero) return;
-
+        
+        pm.swinging = true;
         plungerModel.SetActive(false);
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Rope");
         grappleHit = true;

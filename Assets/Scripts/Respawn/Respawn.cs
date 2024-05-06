@@ -19,7 +19,7 @@ public class Respawn : MonoBehaviour
     {
         if (other.transform.tag == "Player")
         {
-            player.transform.position = GM.lastCheckPointPos;
+            player.transform.position = GM.lastCheckPointPos;   
         }
     }
 }
