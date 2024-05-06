@@ -388,15 +388,15 @@ public class PlayerMovementTwo : MonoBehaviour
     
     public void GrappleUpgrade()
     {
-        _grappleGun.maxDistance += 10f;
-        _grappleGun.forwardThrustForce += 10f;
+        _grappleGun.maxDistance += 25f;
+        _grappleGun.forwardThrustForce += 750f;
         Debug.Log("Upgraded Grapple!");
     }
     
     public void DashUpgrade()
     {
         Debug.Log("Upgraded Dash!");
-        _dashing.dashDuration += 20;
+        _dashing.dashDuration += 0.25;
     }
     
     public void BombUpgrade()
