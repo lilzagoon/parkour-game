@@ -396,7 +396,7 @@ public class PlayerMovementTwo : MonoBehaviour
     public void DashUpgrade()
     {
         Debug.Log("Upgraded Dash!");
-        _dashing.dashDuration += 0.25;
+        _dashing.dashDuration += 0.25f;
     }
     
     public void BombUpgrade()
