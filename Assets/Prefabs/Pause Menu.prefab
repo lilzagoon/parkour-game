@@ -1527,7 +1527,7 @@ Transform:
   m_Children:
   - {fileID: 4747214274186841285}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4747214275667509103
 MonoBehaviour:
@@ -1542,6 +1542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenuUI: {fileID: 4747214274186841286}
+  player: {fileID: 0}
 --- !u!114 &2946104880553030727
 MonoBehaviour:
   m_ObjectHideFlags: 0

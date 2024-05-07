@@ -9,10 +9,12 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject PauseMenuUI;
     public GameObject player;
+    FMOD.Studio.Bus MasterBus;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        MasterBus = FMODUnity.RuntimeManager.GetBus("bus:/");
     }
     
     // Update is called once per frame
@@ -61,6 +63,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         Destroy(player);
+        MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         SceneManager.LoadScene("Main Menu");
        
     }
