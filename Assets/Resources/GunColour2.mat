@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Lpk_LightModel_ToonLightBase 6
+  m_Name: GunColour2
   m_Shader: {fileID: 4800000, guid: 313fcf3aebc04cf4ab4f8c5f2850be7f, type: 3}
-  m_Parent: {fileID: 0}
+  m_Parent: {fileID: 2100000, guid: 4f5c61996b0049846a4175c39b39324b, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -22,23 +22,10 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs:
-    - _BaseMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _OutlineWidth: 0.092
-    - _RimStep: 0.65
-    - _RimStepSmooth: 0.4
-    - _ShadowStep: 0.5
-    - _ShadowStepSmooth: 0.04
-    - _SpecularStep: 0.6
-    - _SpecularStepSmooth: 0.05
+    - _OutlineWidth: 0.032
     m_Colors:
-    - _BaseColor: {r: 0, g: 0.18867922, b: 0.017903883, a: 1}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.34117648, g: 0.05882353, b: 0.18039216, a: 1}
   m_BuildTextureStacks: []

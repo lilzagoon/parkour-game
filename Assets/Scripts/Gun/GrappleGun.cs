@@ -149,7 +149,8 @@ public class GrappleGun : MonoBehaviour
 
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
-
+        
+        //what the fuck does this do
         if (Input.GetKey(KeyCode.D)) rb.AddForce(orientation.right * horizontalThrustForce * Time.deltaTime);
         if (Input.GetKey(KeyCode.A)) rb.AddForce(-orientation.right * horizontalThrustForce * Time.deltaTime);
         if (Input.GetKey(KeyCode.W)) rb.AddForce(orientation.forward * forwardThrustForce * Time.deltaTime);
@@ -163,7 +164,8 @@ public class GrappleGun : MonoBehaviour
             joint.maxDistance = distanceFromPoint * 0.0f;
             joint.minDistance = distanceFromPoint * 0.4f;
         }
-
+        
+        //why ISN'T IT UP THERE WITH THE REST
         if (Input.GetKey(KeyCode.S))
         {
             float extendedDistanceFromPoint = Vector3.Distance(transform.position, grapplePoint) + extendCableSpeed;

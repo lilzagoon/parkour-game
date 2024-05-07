@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Shop : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Shop : MonoBehaviour
     public static bool shopMenuOpen = false;
     public GameObject player;
     public PlayerMovementTwo pm;
-    public int amountM =1;
+    public int amountM = 1;
     public int amountJ = 1;
 
     // Start is called before the first frame update
@@ -24,14 +25,7 @@ public class Shop : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (shopMenuOpen)
-            {
-                Close();
-            }
-            else
-            {
-                Open();
-            }
+            SceneManager.LoadScene("Scenes/Shop");
         }
     }
 
@@ -52,33 +46,6 @@ public class Shop : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-
-    public void MoveSpeedSale()
-    {
-        if (amountM == 1)
-        {
-            if (pm.coins >= 3)
-            {
-                pm.coins -= 3;
-                pm.movementUpgrades++;
-                Debug.Log("Movement Speed Sale made!");
-                amountM -= 1;
-            }
-        }
-    }
-
-    public void JumpUpgrade()
-    {
-        if (amountJ == 1)
-        {
-            if (pm.coins >= 3)
-            {
-                pm.coins -= 3;
-                Debug.Log("Upgraded Jump!");
-                pm.jumpUpgrades++;
-                amountJ -= 1;
-            }
-        }
-    }
+    
 
 }

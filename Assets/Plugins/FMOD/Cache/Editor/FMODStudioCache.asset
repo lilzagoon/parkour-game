@@ -56,6 +56,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 770
+--- !u!114 &-8456416568826327000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Credits Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Credits Music
+  Guid:
+    Data1: -1427228657
+    Data2: 1077264224
+    Data3: -936937837
+    Data4: -1518759899
+  Banks:
+  - {fileID: -1640143801957799850}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 189328
 --- !u!114 &-7849964948087713436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,10 +338,10 @@ MonoBehaviour:
   Path: Assets/fmod/Without A Trace/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638506255959371472
+  lastModified: 638506401017250008
   FileSizes:
   - Name: Desktop
-    Value: 10518848
+    Value: 13306592
   Exists: 1
 --- !u!114 &-1305679434329656360
 MonoBehaviour:
@@ -331,10 +358,10 @@ MonoBehaviour:
   Path: Assets/fmod/Without A Trace/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638506255959380836
+  lastModified: 638506401018477243
   FileSizes:
   - Name: Desktop
-    Value: 1922
+    Value: 2062
   Exists: 1
 --- !u!114 &-824926729650459251
 MonoBehaviour:
@@ -449,12 +476,15 @@ MonoBehaviour:
   - {fileID: -3371725071441171450}
   - {fileID: 2137423957621444493}
   - {fileID: 7322317248055384928}
+  - {fileID: -8456416568826327000}
+  - {fileID: 2219703447155221543}
+  - {fileID: 2896820766093108258}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1640143801957799850}
   StringsBanks:
   - {fileID: -1305679434329656360}
-  cacheTime: 638506255959380836
+  cacheTime: 638506401018477243
   cacheVersion: 131616
 --- !u!114 &1352919169698120863
 MonoBehaviour:
@@ -563,6 +593,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &2219703447155221543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/MainMenu
+  m_EditorClassIdentifier: 
+  Path: event:/Music/MainMenu
+  Guid:
+    Data1: 461474693
+    Data2: 1328677315
+    Data3: 869689250
+    Data4: 523689113
+  Banks:
+  - {fileID: -1640143801957799850}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 40019
 --- !u!114 &2227610551551988163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -619,6 +676,33 @@ MonoBehaviour:
   - Leaves
   - Cloud
   Exists: 1
+--- !u!114 &2896820766093108258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/death
+  Guid:
+    Data1: -252969793
+    Data2: 1174065295
+    Data3: 1003172260
+    Data4: -549625580
+  Banks:
+  - {fileID: -1640143801957799850}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3297946470762834725
 MonoBehaviour:
   m_ObjectHideFlags: 0
