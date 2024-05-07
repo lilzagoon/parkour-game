@@ -77,7 +77,7 @@ public class PlayerMovementTwo : MonoBehaviour, IDataPersistence
         swinging,
         sprinting,
         wallrunning,
-        crouching,
+        //crouching,
         dashing,
         air
     }
@@ -236,11 +236,11 @@ public class PlayerMovementTwo : MonoBehaviour, IDataPersistence
             speedChangeFactor = dashSpeedChangeFactor;
         }
         //sets player to crouching
-        else if (Input.GetKey(crouchKey))
-        {
-            state = MovementState.crouching;
-            desiredMoveSpeed = crouchSpeed;
-        }
+        //else if (Input.GetKey(crouchKey))
+        //{
+        //    state = MovementState.crouching;
+        //    desiredMoveSpeed = crouchSpeed;
+        //}
         
         //sets player to sprinting
         else if (grounded && Input.GetKey(sprintKey))
