@@ -410,6 +410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2432535662358474742}
   - component: {fileID: 1028655384467173935}
+  - component: {fileID: 8906070840030580672}
   m_Layer: 5
   m_Name: SFXVolume
   m_TagString: Untagged
@@ -492,9 +493,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2946104880553030727}
-        m_TargetAssemblyTypeName: SoundSettings, Assembly-CSharp
-        m_MethodName: SFXVolumeLevel
+      - m_Target: {fileID: 8906070840030580672}
+        m_TargetAssemblyTypeName: SoundSettings2, Assembly-CSharp
+        m_MethodName: SetVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -504,6 +505,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8906070840030580672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097902256789717489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab97431d6d691d748a6d88a4e05fd172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VcaName: SFX
+  vcaVolume: 0
 --- !u!1 &2239656378324800613
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,6 +642,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3988890964242701449}
   - component: {fileID: 8602362884368905747}
+  - component: {fileID: 6898939485659677975}
   m_Layer: 5
   m_Name: MusicVolume
   m_TagString: Untagged
@@ -709,9 +725,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2946104880553030727}
-        m_TargetAssemblyTypeName: SoundSettings, Assembly-CSharp
-        m_MethodName: MusicVolumeLevel
+      - m_Target: {fileID: 6898939485659677975}
+        m_TargetAssemblyTypeName: SoundSettings2, Assembly-CSharp
+        m_MethodName: SetVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -721,6 +737,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6898939485659677975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3471602878938684034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab97431d6d691d748a6d88a4e05fd172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VcaName: Music
+  vcaVolume: 0
 --- !u!1 &4747214274159520230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,7 +1535,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4747214275667509072}
   - component: {fileID: 4747214275667509103}
-  - component: {fileID: 2946104880553030727}
   m_Layer: 0
   m_Name: Pause Menu
   m_TagString: Untagged
@@ -1543,18 +1572,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenuUI: {fileID: 4747214274186841286}
   player: {fileID: 0}
---- !u!114 &2946104880553030727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4747214275667509073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed55de4edfcc9bb4bb6c224399d1b2ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4747214275680257815
 GameObject:
   m_ObjectHideFlags: 0
@@ -2052,6 +2069,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9160803366143799247}
   - component: {fileID: 8029922135988240229}
+  - component: {fileID: 633457349259878176}
   m_Layer: 5
   m_Name: MasterVolume
   m_TagString: Untagged
@@ -2134,9 +2152,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2946104880553030727}
-        m_TargetAssemblyTypeName: SoundSettings, Assembly-CSharp
-        m_MethodName: MasterVolumeLevel
+      - m_Target: {fileID: 633457349259878176}
+        m_TargetAssemblyTypeName: SoundSettings2, Assembly-CSharp
+        m_MethodName: SetVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2146,6 +2164,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &633457349259878176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4922833830079404080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab97431d6d691d748a6d88a4e05fd172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VcaName: Master
+  vcaVolume: 0
 --- !u!1 &5639518881550405024
 GameObject:
   m_ObjectHideFlags: 0
