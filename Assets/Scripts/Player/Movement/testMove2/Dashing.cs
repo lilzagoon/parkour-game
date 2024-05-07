@@ -44,7 +44,7 @@ public class Dashing : MonoBehaviour
 
     public void Recalculate (int upgrades)
     {
-        finalDuration = dashDuration + (20 * upgrades);
+        finalDuration = dashDuration + (0.25f * upgrades);
     }
 
     private void Update()

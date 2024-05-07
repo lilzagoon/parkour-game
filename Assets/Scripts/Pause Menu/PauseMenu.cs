@@ -8,9 +8,13 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject PauseMenuUI;
+    public GameObject player;
 
-
-
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+    
     // Update is called once per frame
     void Update()
     {
@@ -53,9 +57,10 @@ public class PauseMenu : MonoBehaviour
     }
     public void Menu()
     {
+        DataPersistenceManager.instance.SaveGame();
         Time.timeScale = 1f;
         GameIsPaused = false;
-        
+        Destroy(player);
         SceneManager.LoadScene("Main Menu");
        
     }

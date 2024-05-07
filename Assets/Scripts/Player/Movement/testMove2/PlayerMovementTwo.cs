@@ -77,7 +77,7 @@ public class PlayerMovementTwo : MonoBehaviour, IDataPersistence
         swinging,
         sprinting,
         wallrunning,
-        crouching,
+        //crouching,
         dashing,
         air
     }
@@ -102,10 +102,20 @@ public class PlayerMovementTwo : MonoBehaviour, IDataPersistence
 
         readyToJump = true;
         startYScale = transform.localScale.y;
-        
-        DontDestroyOnLoad(this.gameObject);
     }
 
+    private static PlayerMovementTwo playerInstance;
+    void Awake()
+    {
+        DontDestroyOnLoad (this);
+            
+        if (playerInstance == null) {
+            playerInstance = this;
+        } else {
+            DestroyObject(gameObject);
+        }
+    }
+    
     public void LoadData(GameData data)
     {
 
@@ -154,7 +164,7 @@ public class PlayerMovementTwo : MonoBehaviour, IDataPersistence
         StateHandler();
 
         // handle drag
-        if (state == MovementState.walking || state == MovementState.sprinting || state == MovementState.crouching)
+        if (state == MovementState.walking || state == MovementState.sprinting)
             rb.drag = groundDrag;
         else
             rb.drag = 0;
@@ -226,11 +236,11 @@ public class PlayerMovementTwo : MonoBehaviour, IDataPersistence
             speedChangeFactor = dashSpeedChangeFactor;
         }
         //sets player to crouching
-        else if (Input.GetKey(crouchKey))
-        {
-            state = MovementState.crouching;
-            desiredMoveSpeed = crouchSpeed;
-        }
+        //else if (Input.GetKey(crouchKey))
+        //{
+        //    state = MovementState.crouching;
+        //    desiredMoveSpeed = crouchSpeed;
+        //}
         
         //sets player to sprinting
         else if (grounded && Input.GetKey(sprintKey))
@@ -435,4 +445,5 @@ public class PlayerMovementTwo : MonoBehaviour, IDataPersistence
         _shoot.Recalculate(bombUpgrades);
         Debug.Log("Upgraded Bomb!");
     }
+    
 }

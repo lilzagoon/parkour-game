@@ -23,6 +23,9 @@ public class GrappleGun : MonoBehaviour
     private bool grappleHit;
     public DialogueTrigger dialogueTrigger;
     private bool lookingAtNPC;
+    public float grappleCd;
+    private float grappleCdTimer;
+    private bool isGrappling = false;
 
 
     [Header("Air Movement")] public Transform orientation;
@@ -46,18 +49,22 @@ public class GrappleGun : MonoBehaviour
         pm = player.GetComponent<PlayerMovementTwo>();
         cursorLook = false;
         lookingAtNPC = false;
-        DontDestroyOnLoad(predictionPoint);
+        grappleCd = 0.3f;
+        grappleCdTimer = grappleCd;
     }
 
     public void Recalculate (int upgrades)
     {
-        maxDistance = 30000 + (10 * upgrades);
-        forwardThrustForce = 2000 + (10 * upgrades);
+        maxDistance = 125 + (10 * upgrades);
+        forwardThrustForce = 2000 + (500 * upgrades);
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (grappleCdTimer > 0)
+            grappleCdTimer -= Time.deltaTime;
+        
+        if (Input.GetButtonDown("Fire1") && !isGrappling)
         {
             StartGrapple();
         }
@@ -65,6 +72,7 @@ public class GrappleGun : MonoBehaviour
         else if (Input.GetButtonUp("Fire1"))
         {
             StopGrapple();
+            grappleCdTimer = grappleCd;
         }
 
         if (Input.GetKeyDown(KeyCode.R) && lookingAtNPC == true)
@@ -86,6 +94,7 @@ public class GrappleGun : MonoBehaviour
 
     void StartGrapple()
     {
+        isGrappling = true;
         predictionPoint.gameObject.SetActive(false);
         rocketAnim.enabled = false;
 
@@ -109,6 +118,7 @@ public class GrappleGun : MonoBehaviour
 
     void StopGrapple()
     {
+        isGrappling = false;
         pm.swinging = false;
         rocketAnim.enabled = true;
         _lineRenderer.positionCount = 0;

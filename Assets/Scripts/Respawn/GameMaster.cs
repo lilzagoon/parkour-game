@@ -13,6 +13,8 @@ public class GameMaster : MonoBehaviour
 
     private void Start()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         player = GameObject.FindGameObjectWithTag("Player");
         pm = player.GetComponent<PlayerMovementTwo>();
         pm.groundContact = 0;

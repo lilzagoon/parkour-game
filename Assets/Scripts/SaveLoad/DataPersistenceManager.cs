@@ -17,10 +17,6 @@ public class DataPersistenceManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null)
-        {
-            Debug.LogError("More than one DataPersistenceManager in the scene.");
-        }
         instance = this;
     }
 
