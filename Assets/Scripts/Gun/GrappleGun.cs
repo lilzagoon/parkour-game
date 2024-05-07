@@ -51,6 +51,7 @@ public class GrappleGun : MonoBehaviour
         lookingAtNPC = false;
         grappleCd = 0.3f;
         grappleCdTimer = grappleCd;
+        DontDestroyOnLoad(predictionPoint);
     }
 
     public void Recalculate (int upgrades)

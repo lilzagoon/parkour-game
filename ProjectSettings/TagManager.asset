@@ -8,6 +8,7 @@ TagManager:
   - GM
   - FxTemporaire
   - ModelSwap
+  - Predict
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Teleporter
   - Rocket
   - NPC
-  - 
+  - PredictPoint
   - 
   - 
   - 
