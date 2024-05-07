@@ -41,9 +41,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chain Strike Levels/CS L3.unity
     guid: ca40e90bfce852943b795b6944b5b64a
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Final Levels/Final Level 1.unity
+    guid: 6d3143d4fea78b247a2b0cdd533b4a11
   - enabled: 1
     path: Assets/Scenes/Final Levels/Final Level 2.unity
     guid: 2177180e019d26e4992ca302901c387c
@@ -51,8 +51,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Final Levels/Final Level 3.unity
     guid: 1bb0f12dcda025c4788784c1fc80d9ee
   - enabled: 1
+    path: Assets/Scenes/Final Levels/Kill that guy.unity
+    guid: 2a34a1cf2a760f54fb18d349b801558f
+  - enabled: 1
     path: Assets/Scenes/Shop.unity
     guid: a094c18a97f2ad84bbc57374eb81bb95
+  - enabled: 1
+    path: Assets/Scenes/Final Levels/Credits.unity
+    guid: e96804e0334fcbc40b5aa0b347168aa0
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

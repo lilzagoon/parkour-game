@@ -16,6 +16,8 @@ public class EndCredits : MonoBehaviour
 
     public void getOut()
     {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
         SceneManager.LoadScene("Main Menu");
     }
 }
