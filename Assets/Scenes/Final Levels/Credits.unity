@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -288,10 +288,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<i>\u2022 Programming \u2022</i>\n\nLily Hayes\nConnor Loughran\n\n<i>\u2022
-    3d art \u2022</i>\n\nOisin Browne\n\n<i>\u2022 Texture art \u2022</i>\n\nOisin
-    browne\n\n<i>\u2022 Animation \u2022</i>\n\nOisin Browne\n\n<i>\u2022 UI Art
-    \u2022<i>\n\nLily Hayes\n\n<i>\u2022 Audio \u2022</i>\n\nConnor Loughran\n\n<i>\u2022
+  m_text: "<i>\u2022 Programming \u2022</i>\n\nLily Hayes\nConnor Loughran\nCharles
+    Kelly\n\n<i>\u2022 3d art \u2022</i>\n\nOisin Browne\n\n<i>\u2022 Texture art
+    \u2022</i>\n\nOisin browne\n\n<i>\u2022 Animation \u2022</i>\n\nOisin Browne\n\n<i>\u2022
+    UI Art \u2022<i>\n\nLily Hayes\n\n<i>\u2022 Audio \u2022</i>\n\nConnor Loughran\n\n<i>\u2022
     game design \u2022</i>\n\nLily Hayes\nConnor Loughran\nOisin Browne\nCharles
     Kelly\n\n<i>\u2022 Level design \u2022</i>\n\nCharles Kelly\n\n<i>\u2022 production
     \u2022</i>\n\nCharles Kelly\n\n<i>\u2022 3rd party assets \u2022\n(Links on itch
