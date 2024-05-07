@@ -10,9 +10,7 @@ public class GameData
     public int grappleUpgrades;
     public int dashUpgrades;
     public int bombUpgrades;
-
-
-
+    
     public GameData()
     {
         this.coinsList = new List<string>();

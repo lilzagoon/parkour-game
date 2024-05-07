@@ -45,10 +45,22 @@ public class GunModelSwap : MonoBehaviour
 
     public void Gold()
     {
-        color1 = new Color32(255, 226, 88, 255);
-        color2 = new Color32(109, 90, 0, 255);
-        gunColour1.SetColor("_BaseColor", color1);
-        gunColour2.SetColor("_BaseColor", color2);
+        if (pm.goldUnlock == false && pm.coins >= 4)
+        {
+            pm.goldUnlock = true;
+            pm.coins -= 4;
+            color1 = new Color32(255, 226, 88, 255);
+            color2 = new Color32(109, 90, 0, 255);
+            gunColour1.SetColor("_BaseColor", color1);
+            gunColour2.SetColor("_BaseColor", color2);
+        }
+        else if (pm.goldUnlock == true)
+        {
+            color1 = new Color32(255, 226, 88, 255);
+            color2 = new Color32(109, 90, 0, 255);
+            gunColour1.SetColor("_BaseColor", color1);
+            gunColour2.SetColor("_BaseColor", color2);
+        }
     }
 
     public void ResetColour()

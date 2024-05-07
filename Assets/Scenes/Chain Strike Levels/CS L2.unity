@@ -1679,6 +1679,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectible
       objectReference: {fileID: 0}
+    - target: {fileID: 1343259936335553658, guid: 8345b9538c206b3468fb3d8628cc9c64, type: 3}
+      propertyPath: id
+      value: e4ebef45-36f3-4d89-9fcb-b3eb323c4b52
+      objectReference: {fileID: 0}
     - target: {fileID: 8806183432015641064, guid: 8345b9538c206b3468fb3d8628cc9c64, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -11388,6 +11392,10 @@ PrefabInstance:
     - target: {fileID: 1198442919141082446, guid: 8345b9538c206b3468fb3d8628cc9c64, type: 3}
       propertyPath: m_Name
       value: Collectible (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1343259936335553658, guid: 8345b9538c206b3468fb3d8628cc9c64, type: 3}
+      propertyPath: id
+      value: d4cf1bcb-556f-482c-8dfd-b8aacbd50c6b
       objectReference: {fileID: 0}
     - target: {fileID: 8806183432015641064, guid: 8345b9538c206b3468fb3d8628cc9c64, type: 3}
       propertyPath: m_RootOrder

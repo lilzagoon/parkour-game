@@ -26,7 +26,6 @@ public class EndofLevel : MonoBehaviour
   public void Restart()
     {
         Time.timeScale = 1;
-        Destroy(player);
         SceneManager.LoadScene(sceneNum);
     }
 

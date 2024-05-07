@@ -89,6 +89,9 @@ public class PlayerMovementTwo : MonoBehaviour, IDataPersistence
 
     public List<string> coinsList = new List<string>();
     public int coins = 0;
+    public bool blueUnlock = false;
+    public bool pinkUnlock = false;
+    public bool goldUnlock = false;
     
     private void Start()
     {
@@ -108,11 +111,18 @@ public class PlayerMovementTwo : MonoBehaviour, IDataPersistence
     void Awake()
     {
         DontDestroyOnLoad (this);
-            
         if (playerInstance == null) {
             playerInstance = this;
         } else {
-            DestroyObject(gameObject);
+            if (this.gameObject.name == "CutscenePlayer")
+            {
+                DestroyObject(playerInstance);
+                playerInstance = this;
+            }
+            else
+            {
+                DestroyObject(gameObject);
+            }
         }
     }
     
