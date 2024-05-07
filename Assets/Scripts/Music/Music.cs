@@ -14,9 +14,12 @@ public class Music : MonoBehaviour
    
     void Start()
     {
+        
         sceneNum = SceneManager.GetActiveScene().buildIndex;
         instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
+        UnMute();
         instance.start();
+        instance.release();
     }
 
    
@@ -24,6 +27,9 @@ public class Music : MonoBehaviour
     {
         sceneNum = SceneManager.GetActiveScene().buildIndex;
         instance.setParameterByName("Level", sceneNum);
+        
+
+
     }
 
     public void Mute()
