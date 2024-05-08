@@ -23,4 +23,14 @@ public class ShopUiHover : MonoBehaviour
     {
         transform.localScale = new Vector2(1.8f, 4f);
     }
+    
+    public void PointerEnterReset()
+    {
+        transform.localScale = new Vector2(2.7f, 1.7f);
+    }
+    
+    public void PointerExitReset()
+    {
+        transform.localScale = new Vector2(2.5f, 1.5f);
+    }
 }

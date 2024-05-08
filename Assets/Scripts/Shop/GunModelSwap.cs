@@ -29,18 +29,42 @@ public class GunModelSwap : MonoBehaviour
     
     public void Pink()
     {
-        color1 = new Color32(206, 65, 126, 255);
-        color2 = new Color32(87, 15, 46, 255);
-        gunColour1.SetColor("_BaseColor", color1);
-        gunColour2.SetColor("_BaseColor", color2);
+        if (pm.pinkUnlock == false && pm.coins >= 4)
+        {
+            pm.pinkUnlock = true;
+            pm.coins -= 4;
+            color1 = new Color32(206, 65, 126, 255);
+            color2 = new Color32(87, 15, 46, 255);
+            gunColour1.SetColor("_BaseColor", color1);
+            gunColour2.SetColor("_BaseColor", color2);
+        }
+        else if (pm.pinkUnlock == true)
+        {
+            color1 = new Color32(206, 65, 126, 255);
+            color2 = new Color32(87, 15, 46, 255);
+            gunColour1.SetColor("_BaseColor", color1);
+            gunColour2.SetColor("_BaseColor", color2);
+        }
     }
 
     public void Blue()
     {
-        color1 = new Color32(74, 205, 255, 255);
-        color2 = new Color32(21, 74, 94, 255);
-        gunColour1.SetColor("_BaseColor", color1);
-        gunColour2.SetColor("_BaseColor", color2);
+        if (pm.blueUnlock == false && pm.coins >= 4)
+        {
+            pm.blueUnlock = true;
+            pm.coins -= 4;
+            color1 = new Color32(74, 205, 255, 255);
+            color2 = new Color32(21, 74, 94, 255);
+            gunColour1.SetColor("_BaseColor", color1);
+            gunColour2.SetColor("_BaseColor", color2);   
+        }
+        else if (pm.blueUnlock == true)
+        {
+            color1 = new Color32(74, 205, 255, 255);
+            color2 = new Color32(21, 74, 94, 255);
+            gunColour1.SetColor("_BaseColor", color1);
+            gunColour2.SetColor("_BaseColor", color2);   
+        }
     }
 
     public void Gold()

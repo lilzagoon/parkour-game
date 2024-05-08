@@ -10,11 +10,17 @@ public class PauseMenu : MonoBehaviour
     public GameObject PauseMenuUI;
     public GameObject player;
     FMOD.Studio.Bus MasterBus;
+    private Dashing _dashing;
+    private GrappleGun _grappleGun;
+    private Shoot _shoot;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         MasterBus = FMODUnity.RuntimeManager.GetBus("bus:/");
+        _dashing = player.GetComponent<Dashing>();
+        _grappleGun = player.GetComponentInChildren<GrappleGun>();
+        _shoot = player.GetComponentInChildren<Shoot>();
     }
     
     // Update is called once per frame
@@ -75,5 +81,8 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         SceneManager.LoadScene("Hub World");
+        _shoot.enabled = true;
+        _dashing.enabled = true;
+        _grappleGun.enabled = true;
     }
 }

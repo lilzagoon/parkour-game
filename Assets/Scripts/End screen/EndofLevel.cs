@@ -9,11 +9,16 @@ public class EndofLevel : MonoBehaviour
 {
     public int sceneNum;
     public GameObject player;
-
+    private Dashing _dashing;
+    private GrappleGun _grappleGun;
+    private Shoot _shoot;
     public void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         sceneNum = SceneManager.GetActiveScene().buildIndex;
+        _dashing = player.GetComponent<Dashing>();
+        _grappleGun = player.GetComponentInChildren<GrappleGun>();
+        _shoot = player.GetComponentInChildren<Shoot>();
     }
 
     public void Next()
@@ -32,6 +37,9 @@ public class EndofLevel : MonoBehaviour
     public void Menu()
     {
         Time.timeScale = 1;
+        _shoot.enabled = true;
+        _dashing.enabled = true;
+        _grappleGun.enabled = true;
         SceneManager.LoadScene(2);
     }
 }

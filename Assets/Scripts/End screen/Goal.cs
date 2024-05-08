@@ -29,7 +29,6 @@ public class Goal : MonoBehaviour
 
         if (other.tag == "Player")
         {
-            DataPersistenceManager.instance.SaveGame();
             Scene scene = SceneManager.GetActiveScene();
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Victory");
             endScreen.gameObject.SetActive(true);
@@ -48,6 +47,7 @@ public class Goal : MonoBehaviour
             {
                 pm.DashUpgrade();
             }
+            DataPersistenceManager.instance.SaveGame();
         }
         
     }
