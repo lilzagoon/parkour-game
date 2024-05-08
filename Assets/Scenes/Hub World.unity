@@ -991,7 +991,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &104201645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1004,7 +1003,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_surface: {fileID: 0}
 --- !u!114 &104201646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1726,7 +1724,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_surface: {fileID: 0}
 --- !u!114 &217195187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1739,7 +1736,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!65 &217195188
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2443,7 +2439,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_surface: {fileID: 0}
 --- !u!114 &253161484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2456,7 +2451,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!65 &253161485
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2575,7 +2569,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_surface: {fileID: 0}
 --- !u!114 &264430740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2588,7 +2581,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!65 &264430741
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9270,7 +9262,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &512948675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9283,7 +9274,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_surface: {fileID: 0}
 --- !u!114 &512948676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26033,7 +26023,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &821387781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26046,7 +26035,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_surface: {fileID: 0}
 --- !u!114 &821387782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26467,6 +26455,77 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1129856391}
   m_SourcePrefab: {fileID: 100100000, guid: ae06e5bdd8f6c2247a90b14783015ed6, type: 3}
+--- !u!1001 &883015232
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1760504628}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 9e21394f98749ea44bcb9265994a61bd, type: 3}
+      propertyPath: m_Name
+      value: Shrub_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9e21394f98749ea44bcb9265994a61bd, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9e21394f98749ea44bcb9265994a61bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1368.361
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9e21394f98749ea44bcb9265994a61bd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 317.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9e21394f98749ea44bcb9265994a61bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 163.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9e21394f98749ea44bcb9265994a61bd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9e21394f98749ea44bcb9265994a61bd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9e21394f98749ea44bcb9265994a61bd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9e21394f98749ea44bcb9265994a61bd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9e21394f98749ea44bcb9265994a61bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9e21394f98749ea44bcb9265994a61bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9e21394f98749ea44bcb9265994a61bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 9e21394f98749ea44bcb9265994a61bd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4a56f57a37db65d47b0495a8fdc05746, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 9e21394f98749ea44bcb9265994a61bd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 969271119}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 9e21394f98749ea44bcb9265994a61bd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 969271118}
+  m_SourcePrefab: {fileID: 100100000, guid: 9e21394f98749ea44bcb9265994a61bd, type: 3}
 --- !u!1 &884142668
 GameObject:
   m_ObjectHideFlags: 0
@@ -36240,6 +36299,55 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &969271116 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 9e21394f98749ea44bcb9265994a61bd, type: 3}
+  m_PrefabInstance: {fileID: 883015232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &969271117 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 9e21394f98749ea44bcb9265994a61bd, type: 3}
+  m_PrefabInstance: {fileID: 883015232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &969271118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969271116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1b7ad48b20124469f9f8478adec079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sign: {fileID: 691578127}
+  dialogue:
+    sentences:
+    - What the heck? It's covered in some kind of... briar sap?
+    - 
+  dialogueManager: {fileID: 2040579868}
+--- !u!65 &969271119
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969271116}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 14.5761, y: 3.179781, z: 6.2776794}
+  m_Center: {x: 0.3523326, y: 1.36267, z: -0.6011505}
 --- !u!1 &969653874 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1635574816639542815, guid: ae06e5bdd8f6c2247a90b14783015ed6, type: 3}
@@ -37251,7 +37359,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4129396048688012205, guid: a4f9b10ad0037ef4d84ab6b2ae1782a5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37441,7 +37549,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &1111287250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37454,7 +37561,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_surface: {fileID: 0}
 --- !u!114 &1111287251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37881,7 +37987,7 @@ MonoBehaviour:
   dialogue:
     sentences:
     - You're new, right? How're you holding up?
-    - Behind me is the green portal. It brings you to Grapple Hook levels.
+    - Behind me is the blue portal. It brings you to Grapple Hook levels.
     - And apparently if you beat them all, your Grapple Hook improves.
     - I could totally get that upgrade myself, I just... don't feel like it is all...
     - 
@@ -37925,7 +38031,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &1150999306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37938,7 +38043,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_surface: {fileID: 0}
 --- !u!114 &1150999307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38687,7 +38791,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &1265387538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38700,7 +38803,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_surface: {fileID: 0}
 --- !u!114 &1265387539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38763,7 +38865,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_surface: {fileID: 0}
 --- !u!114 &1275098838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38776,7 +38877,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!65 &1275098839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40069,7 +40169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &1423749885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40082,7 +40181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_surface: {fileID: 0}
 --- !u!114 &1423749886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40943,7 +41041,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &1518766194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40956,7 +41053,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_surface: {fileID: 0}
 --- !u!114 &1518766195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41218,7 +41314,7 @@ MonoBehaviour:
     sentences:
     - Howdy there! Press E to browse what I have in stock.
     - If you've found any paintbrushes in those portals over there, I'd be happy
-      to take them off your hands
+      to take them off your hands.
     - What do I use them for? An ox can have a hobby, can't they?
     - 
   dialogueManager: {fileID: 2040579868}
@@ -41495,7 +41591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &1581664277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41508,7 +41603,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_surface: {fileID: 0}
 --- !u!114 &1581664278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41561,7 +41655,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &1594130237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41574,7 +41667,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_surface: {fileID: 0}
 --- !u!114 &1594130238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42353,7 +42445,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &1737446467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42366,7 +42457,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_surface: {fileID: 0}
 --- !u!114 &1737446468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42741,6 +42831,7 @@ Transform:
   - {fileID: 302684622}
   - {fileID: 1556519050}
   - {fileID: 343782734}
+  - {fileID: 969271117}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48798,7 +48889,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &1951009714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48811,7 +48901,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_surface: {fileID: 0}
 --- !u!114 &1951009715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48902,7 +48991,7 @@ MonoBehaviour:
     - Oh, so you're the human...
     - Are you off to the yellow portal?
     - They say an upgrade to your Dash lies at the end of the third level.
-    - But I don't know if i trust the rumours...
+    - But I don't know if I trust the rumours...
     - 
   dialogueManager: {fileID: 2040579868}
 --- !u!1 &2007881682 stripped
@@ -49563,9 +49652,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172674443}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6b09806f6db82034faa0b37ff5f2b4d2, type: 2}
+  m_Controller: {fileID: 9100000, guid: c80f819f677201846b93855b14d01f41, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
