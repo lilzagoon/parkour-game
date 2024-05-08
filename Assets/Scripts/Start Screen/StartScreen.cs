@@ -15,7 +15,7 @@ public class StartScreen : MonoBehaviour
 
     public void Setting()
     {
-        startScreen.SetActive(false);
+        //startScreen.SetActive(false);
         settingsScreen.SetActive(true);
     }
 
