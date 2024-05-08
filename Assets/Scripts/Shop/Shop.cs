@@ -23,29 +23,9 @@ public class Shop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetButtonDown("Shop"))
         {
             SceneManager.LoadScene("Scenes/Shop");
         }
     }
-
-    public void Open()
-    {
-        shopUI.SetActive(true);
-        Time.timeScale = 0f;
-        shopMenuOpen = true;
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = true;
-    }
-
-    public void Close()
-    {
-        shopUI.SetActive(false);
-        Time.timeScale = 1f;
-        shopMenuOpen = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
-    
-
 }

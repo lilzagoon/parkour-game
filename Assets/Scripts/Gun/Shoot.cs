@@ -24,10 +24,13 @@ public class Shoot : MonoBehaviour
 
     void Update ()
     {
+        float fireAxis = Input.GetAxisRaw("Fire2");
+        bool fire = Input.GetButtonDown("Fire2") || (fireAxis > 0);
+        
         if (bombCdTimer > 0)
             bombCdTimer -= Time.deltaTime;
         
-        if (Input.GetButtonDown("Fire2") && bombCdTimer <= 0)
+        if ((fire) && bombCdTimer <= 0)
         {
             _rocketGun.anim.SetTrigger("mouse2");
             Rigidbody instantiatedProjectile = Instantiate(projectile,transform.position,transform.rotation)as Rigidbody;
