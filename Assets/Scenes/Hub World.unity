@@ -1893,11 +1893,12 @@ MonoBehaviour:
   sign: {fileID: 691578127}
   dialogue:
     sentences:
-    - Woah their champ.
-    - This portal leads you to the evil Storyboars base.
-    - I would not go their until i was prepard.
-    - But if you are going then give that Storyboar a good old one-two from all of
-      us.
+    - Woah there, champ!
+    - This portal leads you to the evil Storyboar's castle.
+    - I would NOT go there without an upgrade or two under my belt.
+    - But if you're ready, then give that Storyboar a good ol' one-two from all of
+      us!
+    - 
   dialogueManager: {fileID: 2040579868}
 --- !u!1 &219481677
 GameObject:
@@ -9087,9 +9088,10 @@ MonoBehaviour:
   dialogue:
     sentences:
     - Are you heading to the red portal?
-    - I hear that it leads you to Rocket Jump levels.
-    - And if you beat them all your Rocket Jump becomes stronger.
-    - Well best of luck!
+    - I hear it leads to Rocket Jump levels.
+    - And if you beat them all, your Rocket Jump becomes stronger...
+    - Well, best of luck!
+    - 
   dialogueManager: {fileID: 2040579868}
 --- !u!1001 &508675812
 PrefabInstance:
@@ -37878,10 +37880,11 @@ MonoBehaviour:
   sign: {fileID: 691578127}
   dialogue:
     sentences:
-    - Oh, how you doing in?
-    - Behind me id the green portal.
-    - It brings you to Grapple Hook levels.
-    - And apparently if you beat them all your Grapple Hook improves.
+    - You're new, right? How're you holding up?
+    - Behind me is the green portal. It brings you to Grapple Hook levels.
+    - And apparently if you beat them all, your Grapple Hook improves.
+    - I could totally get that upgrade myself, I just... don't feel like it is all...
+    - 
   dialogueManager: {fileID: 2040579868}
 --- !u!1 &1150999302 stripped
 GameObject:
@@ -41213,7 +41216,10 @@ MonoBehaviour:
   sign: {fileID: 691578127}
   dialogue:
     sentences:
-    - Press E to open up the shop
+    - Howdy there! Press E to browse what I have in stock.
+    - If you've found any paintbrushes in those portals over there, I'd be happy
+      to take them off your hands
+    - What do I use them for? An ox can have a hobby, can't they?
     - 
   dialogueManager: {fileID: 2040579868}
 --- !u!114 &1553497240
@@ -48893,10 +48899,11 @@ MonoBehaviour:
   sign: {fileID: 691578127}
   dialogue:
     sentences:
-    - Oh so your the human.
+    - Oh, so you're the human...
     - Are you off to the yellow portal?
-    - It brings you to Dash levels and if you beat them all your Dash becomes better.
-    - But I don't know if i trust the roomers.
+    - They say an upgrade to your Dash lies at the end of the third level.
+    - But I don't know if i trust the rumours...
+    - 
   dialogueManager: {fileID: 2040579868}
 --- !u!1 &2007881682 stripped
 GameObject:
