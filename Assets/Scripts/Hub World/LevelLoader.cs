@@ -42,7 +42,7 @@ public class LevelLoader : MonoBehaviour
                 _grappleGun.enabled = false;
                 _shoot.enabled = false;
             }
-            
+            player.GetComponent<Rigidbody>().velocity = Vector3.zero;
             SceneManager.LoadScene(sceneNum);
         }
     }

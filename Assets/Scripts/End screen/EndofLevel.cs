@@ -12,6 +12,7 @@ public class EndofLevel : MonoBehaviour
     private Dashing _dashing;
     private GrappleGun _grappleGun;
     private Shoot _shoot;
+    private PlayerMovementTwo pm;
     public void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -24,6 +25,7 @@ public class EndofLevel : MonoBehaviour
     public void Next()
     {
         Time.timeScale = 1;
+        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         SceneManager.LoadScene(sceneNum +1);
     }
 

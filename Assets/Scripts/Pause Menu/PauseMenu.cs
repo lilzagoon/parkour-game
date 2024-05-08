@@ -78,6 +78,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         GameIsPaused = false;
+        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         SceneManager.LoadScene("Hub World");

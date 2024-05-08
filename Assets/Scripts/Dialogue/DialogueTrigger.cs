@@ -20,7 +20,7 @@ public class DialogueTrigger : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && isInRange == true)
+        if (Input.GetButtonDown("Talk") && isInRange == true)
         {
             FindObjectOfType<DialogueManager>().DisplayNextSentence();
         }
