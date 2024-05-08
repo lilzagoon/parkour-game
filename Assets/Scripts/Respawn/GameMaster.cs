@@ -9,6 +9,7 @@ public class GameMaster : MonoBehaviour
     public Vector3 lastCheckPointPos;
     public GameObject player;
     public PlayerMovementTwo pm;
+    public Dashing _Dashing;
     bool spawnpointRan = false;
 
     private void Start()
@@ -18,6 +19,8 @@ public class GameMaster : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         pm = player.GetComponent<PlayerMovementTwo>();
         pm.groundContact = 0;
+        _Dashing = player.GetComponent<Dashing>();
+        pm.dashCdTimer = 0;
     }
 
     private void Update()

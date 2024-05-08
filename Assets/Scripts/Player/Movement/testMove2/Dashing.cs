@@ -30,7 +30,6 @@ public class Dashing : MonoBehaviour
     
     [Header("Cooldown")] 
     public float dashCd;
-    public float dashCdTimer;
 
     // [Header("Input")] 
     // public KeyCode dashKey = KeyCode.Q;
@@ -54,16 +53,16 @@ public class Dashing : MonoBehaviour
             Dash();
         }
 
-        if (dashCdTimer > 0 && pm.grounded)
-            dashCdTimer -= Time.deltaTime;
-        else if (dashCdTimer > 0)
-            dashCdTimer -= Time.deltaTime / 4;
+        if (pm.dashCdTimer > 0 && pm.grounded)
+            pm.dashCdTimer -= Time.deltaTime;
+        else if (pm.dashCdTimer > 0)
+            pm.dashCdTimer -= Time.deltaTime / 4;
     }
 
     private void Dash()
     {
-        if (dashCdTimer > 0) return;
-        else dashCdTimer = dashCd;
+        if (pm.dashCdTimer > 0) return;
+        else pm.dashCdTimer = dashCd;
         
         pm.dashing = true;
         cam.DoFov(dashFov);

@@ -69,6 +69,7 @@ public class PlayerMovementTwo : MonoBehaviour, IDataPersistence
     private GrappleGun _grappleGun;
     private Dashing _dashing;
     private Shoot _shoot;
+    public float dashCdTimer;
     
     public MovementState state;
     public enum MovementState

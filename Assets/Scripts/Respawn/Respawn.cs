@@ -24,6 +24,7 @@ public class Respawn : MonoBehaviour
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Death");
             player.GetComponent<Rigidbody>().velocity = Vector3.zero;
             pm.dashing = false;
+            pm.dashCdTimer = 0;
             player.transform.position = GM.lastCheckPointPos;   
         }
     }
