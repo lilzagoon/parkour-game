@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{bfaa7771-a494-49ce-a54b-c75f3e273a9a}">
+		<property name="assetPath">
+			<value>reload.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.49015873015873018</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{81519d62-3903-4384-a2eb-88f9e45f9ac7}</destination>
+		</relationship>
+	</object>
+</objects>
