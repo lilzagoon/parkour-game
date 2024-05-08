@@ -33,6 +33,7 @@ public class LookAt : MonoBehaviour
     {
         while (true)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/BOAR BLAST");
             GameObject currentProj = Instantiate(projectile, _FirePointVector3, Quaternion.identity);
             currentProj.transform.rotation = transform.rotation;
             currentProj.transform.Rotate(0, 90, 0);
