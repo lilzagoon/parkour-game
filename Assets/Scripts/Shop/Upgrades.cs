@@ -59,7 +59,7 @@ public class Upgrades : MonoBehaviour
     {
         pm.coins -= 3;
         Debug.Log("Upgraded Dash!");
-        _dashing.dashDuration += 0.25f;
+        _dashing.dashDuration += 0.15f;
     }
 
     private void JumpUpgrade()
@@ -80,7 +80,7 @@ public class Upgrades : MonoBehaviour
     {
         pm.coins -= 3;
         _grappleGun.maxDistance += 25f;
-        _grappleGun.forwardThrustForce += 30f;
+        _grappleGun.forwardThrustForce += 750f;
         Debug.Log("Upgraded Grapple!");
     }
 

@@ -99,9 +99,9 @@ public class GunModelSwap : MonoBehaviour
     {
         if (amountM == 1)
         {
-            if (pm.coins >= 3)
+            if (pm.coins >= 4)
             {
-                pm.coins -= 3;
+                pm.coins -= 4;
                 pm.movementUpgrades++;
                 Debug.Log("Movement Speed Sale made!");
                 amountM -= 1;
@@ -113,9 +113,9 @@ public class GunModelSwap : MonoBehaviour
     {
         if (amountJ == 1)
         {
-            if (pm.coins >= 3)
+            if (pm.coins >= 4)
             {
-                pm.coins -= 3;
+                pm.coins -= 4;
                 Debug.Log("Upgraded Jump!");
                 pm.jumpUpgrades++;
                 amountJ -= 1;
