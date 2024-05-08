@@ -1554,7 +1554,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &232438607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2262,7 +2261,9 @@ MonoBehaviour:
   sign: {fileID: 667089258}
   dialogue:
     sentences:
-    - You can use a Dash by pressing Q to lunch you in the way your looking.
+    - By pressing Q, you can launch yourself in the direction you're looking.
+    - You'll need to recover after dashing, and it'll take longer if you're in the
+      air.
     - 
   dialogueManager: {fileID: 207953162}
 --- !u!1 &396111847
@@ -2334,9 +2335,9 @@ MonoBehaviour:
   sign: {fileID: 667089258}
   dialogue:
     sentences:
-    - You can fire out a Rocket by pressing Right Click.
+    - You can fire a Rocket by pressing Right Click.
     - You can launch yourself by aiming it at a wall or the floor!
-    - Once you get past this we will be able to go to the grove and be safe.
+    - Once you get past here, we will be safe in the grove.
     - 
   dialogueManager: {fileID: 207953162}
 --- !u!1 &435445330
@@ -4527,7 +4528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &954630196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4745,7 +4745,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &1005558396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5053,7 +5052,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &1091489039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5626,7 +5624,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &1266470431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6275,7 +6272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &1449926140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6814,7 +6810,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &1559307651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12367,7 +12362,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &1617346243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12810,7 +12804,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &1732739782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17939,9 +17932,9 @@ MonoBehaviour:
   sign: {fileID: 667089258}
   dialogue:
     sentences:
-    - Ok so you see the thing above me, thats a grapple point.
-    - If you aim at it and are in range you can Left Click to hook on.
-    - You will know your in range because an orb will appear!
+    - You see the thing above me? That's a grapple point.
+    - If you aim at it while in range, you can Left Click to hook on.
+    - You'll know you're in range when an orb appears!
     - 
   dialogueManager: {fileID: 207953162}
 --- !u!1 &1818491157
@@ -18516,11 +18509,11 @@ MonoBehaviour:
   sign: {fileID: 667089258}
   dialogue:
     sentences:
-    - Oh hey their you look new. Let me help you out.
+    - Oh hey there! You look new, let me help you out.
     - Use WASD to move around and Space Bar to jump.
-    - 'If you want to run hold Shift. '
-    - And you can open up your pause menu by pressing I.
-    - Oh and if you see a blue wall just know you can run on them.
+    - 'If you want to run, hold Shift. '
+    - And you can open up your pause menu by pressing escape.
+    - Oh, and if you see a blue wall just jump onto it and you can run right across.
     - 
   dialogueManager: {fileID: 207953162}
 --- !u!1 &2003706887 stripped
@@ -18744,7 +18737,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &2110857837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18900,7 +18892,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraShaker: {fileID: 0}
 --- !u!114 &2127941062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19002,6 +18993,10 @@ PrefabInstance:
     - target: {fileID: 4595224591015583944, guid: d87eede741f3c58429ef85d13b57db46, type: 3}
       propertyPath: m_Name
       value: StoryboarShoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595224591015583944, guid: d87eede741f3c58429ef85d13b57db46, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4595224591015583950, guid: d87eede741f3c58429ef85d13b57db46, type: 3}
       propertyPath: m_RootOrder
