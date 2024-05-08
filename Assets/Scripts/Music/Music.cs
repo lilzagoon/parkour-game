@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class Music : MonoBehaviour
 {
     private FMOD.Studio.EventInstance instance;
+    FMOD.Studio.Bus MasterBus;
 
-    
     public FMODUnity.EventReference fmodEvent;
 
     public int sceneNum;
    
     void Start()
     {
-        
+        MasterBus = FMODUnity.RuntimeManager.GetBus("bus:/");
         sceneNum = SceneManager.GetActiveScene().buildIndex;
         instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
         UnMute();
@@ -35,6 +36,7 @@ public class Music : MonoBehaviour
     public void Mute()
     {
         instance.setParameterByName("On or Off", 1);
+        MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     public void UnMute()
