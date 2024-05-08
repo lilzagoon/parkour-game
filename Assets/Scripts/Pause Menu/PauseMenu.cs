@@ -13,6 +13,7 @@ public class PauseMenu : MonoBehaviour
     private Dashing _dashing;
     private GrappleGun _grappleGun;
     private Shoot _shoot;
+    private GameObject endScreen;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class PauseMenu : MonoBehaviour
         _dashing = player.GetComponent<Dashing>();
         _grappleGun = player.GetComponentInChildren<GrappleGun>();
         _shoot = player.GetComponentInChildren<Shoot>();
+        endScreen = GameObject.Find("EndScreen");
     }
     
     // Update is called once per frame

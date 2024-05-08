@@ -13,6 +13,9 @@ public class EndofLevel : MonoBehaviour
     private GrappleGun _grappleGun;
     private Shoot _shoot;
     private PlayerMovementTwo pm;
+    public GameObject gm;
+    public GameObject goal;
+    public Goal goalScript;
     public void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -20,6 +23,9 @@ public class EndofLevel : MonoBehaviour
         _dashing = player.GetComponent<Dashing>();
         _grappleGun = player.GetComponentInChildren<GrappleGun>();
         _shoot = player.GetComponentInChildren<Shoot>();
+        gm = GameObject.FindGameObjectWithTag("GM");
+        goal = GameObject.Find("Goal");
+        goalScript = goal.GetComponent<Goal>();
     }
 
     public void Next()
@@ -31,10 +37,12 @@ public class EndofLevel : MonoBehaviour
 
 
   public void Restart()
-    {
+  {
+        player.transform.position = gm.transform.position;
+        this.gameObject.SetActive(false);
         Time.timeScale = 1;
         SceneManager.LoadScene(sceneNum);
-    }
+  }
 
     public void Menu()
     {

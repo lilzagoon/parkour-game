@@ -84,8 +84,8 @@ public class Wallrunning : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        upwardsRunning = Input.GetKey(upwardsRunKey);
-        downwardsRunning = Input.GetKey(downwardsRunKey);
+        upwardsRunning = Input.GetButton("Upwards Wallrun");
+        downwardsRunning = Input.GetButton("Downwards Wallrun");
         
         //Wallrunning State
         if ((wallLeft || wallRight) && verticalInput > 0 && AboveGround() && !exitingWall)
@@ -105,7 +105,7 @@ public class Wallrunning : MonoBehaviour
                 
             
             //wall jump
-            if(Input.GetKeyDown(jumpKey)) WallJump();
+            if(Input.GetButtonDown("Jump")) WallJump();
         }
         
         //exiting state
