@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShopUiHover : MonoBehaviour
 {
+    
     public void PointerEnter()
     {
         transform.localScale = new Vector2(1.77f, 9.4f);
@@ -32,5 +33,15 @@ public class ShopUiHover : MonoBehaviour
     public void PointerExitReset()
     {
         transform.localScale = new Vector2(2.5f, 1.5f);
+    }
+
+    public void PointerTestEnter()
+    {
+        transform.localScale = new Vector2(1.2f, 1.2f);
+    }
+
+    public void PointerTestExit()
+    {
+        transform.localScale = new Vector2(1f, 1f);
     }
 }

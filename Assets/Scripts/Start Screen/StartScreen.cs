@@ -7,6 +7,7 @@ public class StartScreen : MonoBehaviour
 {
     public GameObject startScreen;
     public GameObject settingsScreen;
+    public GameObject newGameScreen;
     
     public void Play()
     {
@@ -28,5 +29,15 @@ public class StartScreen : MonoBehaviour
     public void Quite()
     {
         Application.Quit();
+    }
+
+    public void OpenNewGameMenu()
+    {
+        newGameScreen.SetActive(true);
+    }
+
+    public void NewGameBack()
+    {
+        newGameScreen.SetActive(false);
     }
 }
