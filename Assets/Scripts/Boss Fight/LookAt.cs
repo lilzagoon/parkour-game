@@ -13,6 +13,8 @@ public class LookAt : MonoBehaviour
     GameObject player;
     public GameObject projectile;
     private IEnumerator throwCoroutine;
+    public Vector3 _FirePointVector3;
+    public Transform firePoint;
     
     private void Start()
     {
@@ -24,13 +26,14 @@ public class LookAt : MonoBehaviour
     void Update()
     {
         transform.LookAt(player.transform.position);
+        _FirePointVector3 = firePoint.position;
     }
 
     IEnumerator Throw(float time)
     {
         while (true)
         {
-            GameObject currentProj = Instantiate(projectile);
+            GameObject currentProj = Instantiate(projectile, _FirePointVector3, Quaternion.identity);
             currentProj.transform.rotation = transform.rotation;
             currentProj.transform.Rotate(0, 90, 0);
             currentProj.GetComponent<Rigidbody>().velocity = Vector3.Normalize(player.transform.position - currentProj.transform.position) * 30;

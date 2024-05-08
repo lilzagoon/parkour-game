@@ -119,6 +119,11 @@ public class PlayerMovementTwo : MonoBehaviour, IDataPersistence
                 DestroyObject(playerInstance);
                 playerInstance = this;
             }
+            else if (playerInstance.name == "CutscenePlayer")
+            {
+                DestroyObject(playerInstance);
+                playerInstance = this;
+            }
             else
             {
                 DestroyObject(gameObject);

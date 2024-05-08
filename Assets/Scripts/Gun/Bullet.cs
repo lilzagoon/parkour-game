@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-
+    public float killTimer = 20f;
     public GameObject explosion;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,12 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        killTimer -= Time.deltaTime;
+
+        if (killTimer <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

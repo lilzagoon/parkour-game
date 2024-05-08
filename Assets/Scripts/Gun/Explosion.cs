@@ -6,7 +6,8 @@ public class Explosion : MonoBehaviour
 {
     public float radius = 5.0F;
     public float power = 10.0F;
-
+    public float killTimer = 5f;
+    
     void Start()
     {
         Vector3 explosionPos = transform.position;
@@ -20,4 +21,13 @@ public class Explosion : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        killTimer -= Time.deltaTime;
+
+        if (killTimer <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
