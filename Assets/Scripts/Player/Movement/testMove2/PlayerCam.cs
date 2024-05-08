@@ -35,8 +35,17 @@ public class PlayerCam : MonoBehaviour
         float joystickX = Input.GetAxisRaw("HorizontalJ") * Time.fixedDeltaTime * sensX;
         float joystickY = Input.GetAxisRaw("VerticalJ") * Time.fixedDeltaTime * sensY;
 
-        yRotation += mouseX;
-        xRotation -= mouseY;
+        if (mouseX != 0 || mouseY != 0)
+        {
+            yRotation += mouseX;
+            xRotation -= mouseY;   
+        }
+        else
+        {
+            yRotation += joystickX;
+            xRotation -= joystickY;
+        }
+        
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
         
         camHolder.rotation = Quaternion.Euler(xRotation, yRotation, 0);

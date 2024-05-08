@@ -65,17 +65,20 @@ public class GrappleGun : MonoBehaviour
         if (grappleCdTimer > 0)
             grappleCdTimer -= Time.deltaTime;
         
-        if (Input.GetButtonDown("Fire1") && !isGrappling)
+        float fireAxis = Input.GetAxisRaw("Fire1");
+        bool fire = Input.GetButtonDown("Fire1") || (fireAxis > 0);
+            
+        while (fire && !isGrappling)
         {
             StartGrapple();
         }
 
-        else if (Input.GetButtonUp("Fire1"))
+        if (!fire)
         {
             StopGrapple();
             grappleCdTimer = grappleCd;
         }
-
+        
         if (Input.GetKeyDown(KeyCode.R) && lookingAtNPC == true)
         {
             dialogueTrigger.TriggerDialogue();

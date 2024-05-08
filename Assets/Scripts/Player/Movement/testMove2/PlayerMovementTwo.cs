@@ -75,7 +75,7 @@ public class PlayerMovementTwo : MonoBehaviour, IDataPersistence
     {
         walking,
         swinging,
-        sprinting,
+        //sprinting,
         wallrunning,
         //crouching,
         dashing,
@@ -179,7 +179,7 @@ public class PlayerMovementTwo : MonoBehaviour, IDataPersistence
         StateHandler();
 
         // handle drag
-        if (state == MovementState.walking || state == MovementState.sprinting)
+        if (state == MovementState.walking)
             rb.drag = groundDrag;
         else
             rb.drag = 0;
@@ -258,19 +258,18 @@ public class PlayerMovementTwo : MonoBehaviour, IDataPersistence
         //}
         
         //sets player to sprinting
-        else if (grounded && Input.GetKey(sprintKey))
-        {
-            state = MovementState.sprinting;
-            desiredMoveSpeed = sprintSpeed;
-            sprinting = true;
-        }
+        // else if (grounded && Input.GetButton("Sprint"))
+        // {
+        //     state = MovementState.sprinting;
+        //     desiredMoveSpeed = sprintSpeed;
+        //     sprinting = true;
+        // }
         
         //sets player to walking
         else if (grounded)
         {
             state = MovementState.walking;
-            desiredMoveSpeed = walkSpeed;
-            sprinting = false;
+            desiredMoveSpeed = sprintSpeed;
         }
         
         //air control
