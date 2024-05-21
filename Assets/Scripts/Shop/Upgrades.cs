@@ -39,7 +39,7 @@ public class Upgrades : MonoBehaviour
             canSell = false;
         }
     }
-
+    
     void MoveSpeedSale()
     {
         pm.coins-=3;

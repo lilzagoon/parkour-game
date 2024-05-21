@@ -17,7 +17,8 @@ public class PlayerMovementTwo : MonoBehaviour, IDataPersistence
     public int groundContact = 0;
     public float wallrunningSpeed;
     public float swingSpeed;
-    public float movementUpgrades;
+    public int movementUpgrades;
+    public bool moveUpgraded;
     public float speedBonus;
     
     [Header("Jumping")]
@@ -25,7 +26,8 @@ public class PlayerMovementTwo : MonoBehaviour, IDataPersistence
     public float jumpCooldown;
     public float airMultiplier;
     public float jumpBonus;
-    public float jumpUpgrades;
+    public int jumpUpgrades;
+    public bool jumpUpgraded;
     bool readyToJump;
 
     [Header("Crouching")] 
@@ -137,7 +139,12 @@ public class PlayerMovementTwo : MonoBehaviour, IDataPersistence
 
         this.coinsList = data.coinsList;
         this.coins = data.coins;
-
+        this.jumpUpgraded = data.jumpUpgraded;
+        this.moveUpgraded = data.moveUpgraded;
+        this.pinkUnlock = data.pinkUnlock;
+        this.goldUnlock = data.yellowUnlock;
+        this.blueUnlock = data.blueUnlock;
+        
         _grappleGun = GetComponentInChildren<GrappleGun>();
         _dashing = GetComponent<Dashing>();
         _shoot = GetComponentInChildren<Shoot>();
@@ -150,6 +157,9 @@ public class PlayerMovementTwo : MonoBehaviour, IDataPersistence
 
         this.bombUpgrades = data.bombUpgrades;
         _shoot.Recalculate(this.bombUpgrades);
+
+        this.movementUpgrades = data.moveUpgrades;
+        this.jumpUpgrades = data.jumpUpgrades;
     }
 
     public void SaveData(ref GameData data)
@@ -160,6 +170,13 @@ public class PlayerMovementTwo : MonoBehaviour, IDataPersistence
         data.grappleUpgrades = this.grappleUpgrades;
         data.dashUpgrades = this.dashUpgrades;
         data.bombUpgrades = this.bombUpgrades;
+        data.jumpUpgrades = this.jumpUpgrades;
+        data.moveUpgrades = this.movementUpgrades;
+        data.pinkUnlock = pinkUnlock;
+        data.blueUnlock = blueUnlock;
+        data.yellowUnlock = goldUnlock;
+        data.jumpUpgraded = jumpUpgraded;
+        data.moveUpgraded = moveUpgraded;
     }
 
     private void Update()

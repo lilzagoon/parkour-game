@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GunModelSwap : MonoBehaviour
+public class GunModelSwap : MonoBehaviour, IDataPersistence
 {
     public GameObject player;
     public PlayerMovementTwo pm;
@@ -25,6 +25,21 @@ public class GunModelSwap : MonoBehaviour
         color2 = new Color32(0, 70, 18, 255);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+    }
+    
+    public void LoadData(GameData data)
+    {
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.coinsList = pm.coinsList;
+        data.coins = pm.coins;
+        data.pinkUnlock = pm.pinkUnlock;
+        data.blueUnlock = pm.blueUnlock;
+        data.yellowUnlock = pm.goldUnlock;
+        data.jumpUpgraded = pm.jumpUpgraded;
+        data.moveUpgraded = pm.moveUpgraded;
     }
     
     public void Pink()
@@ -99,8 +114,9 @@ public class GunModelSwap : MonoBehaviour
     {
         if (amountM == 1)
         {
-            if (pm.coins >= 4)
+            if (pm.coins >= 4 && pm.moveUpgraded == false)
             {
+                pm.moveUpgraded = true;
                 pm.coins -= 4;
                 pm.movementUpgrades++;
                 Debug.Log("Movement Speed Sale made!");
@@ -113,8 +129,9 @@ public class GunModelSwap : MonoBehaviour
     {
         if (amountJ == 1)
         {
-            if (pm.coins >= 4)
+            if (pm.coins >= 4 && pm.jumpUpgraded == false)
             {
+                pm.jumpUpgraded = true;
                 pm.coins -= 4;
                 Debug.Log("Upgraded Jump!");
                 pm.jumpUpgrades++;
@@ -125,6 +142,7 @@ public class GunModelSwap : MonoBehaviour
 
     public void ExitShop()
     {
+        DataPersistenceManager.instance.SaveGame();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         SceneManager.LoadScene("Scenes/Hub World");
