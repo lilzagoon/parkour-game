@@ -493,6 +493,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneNum: 9
   player: {fileID: 0}
+  gm: {fileID: 0}
+  goal: {fileID: 0}
+  goalScript: {fileID: 0}
 --- !u!114 &76943403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -647,6 +650,7 @@ MonoBehaviour:
   lastCheckPointPos: {x: -4.4, y: -92, z: 41.3}
   player: {fileID: 0}
   pm: {fileID: 0}
+  _Dashing: {fileID: 0}
 --- !u!4 &94954022
 Transform:
   m_ObjectHideFlags: 0
@@ -14300,6 +14304,7 @@ MonoBehaviour:
   endScreen: {fileID: 338780488}
   player: {fileID: 0}
   pm: {fileID: 0}
+  justRestarted: 1
 --- !u!65 &1449341264
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15361,7 +15366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5922607235690076204, guid: 2d67c56b71b2c674b866a683e79d0d07, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -274.2
+      value: -1010
       objectReference: {fileID: 0}
     - target: {fileID: 5922607235690076204, guid: 2d67c56b71b2c674b866a683e79d0d07, type: 3}
       propertyPath: m_LocalPosition.z

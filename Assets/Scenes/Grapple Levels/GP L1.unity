@@ -5184,6 +5184,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneNum: 3
   player: {fileID: 0}
+  gm: {fileID: 0}
+  goal: {fileID: 0}
+  goalScript: {fileID: 0}
 --- !u!114 &76943403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5378,6 +5381,7 @@ MonoBehaviour:
   lastCheckPointPos: {x: 16.5, y: -72, z: 42.75}
   player: {fileID: 0}
   pm: {fileID: 0}
+  _Dashing: {fileID: 0}
 --- !u!4 &94954022
 Transform:
   m_ObjectHideFlags: 0
@@ -13218,7 +13222,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181200514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -490.63678, y: -635.02, z: 208.04071}
+  m_LocalPosition: {x: -490.63678, y: -1817, z: 208.04071}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14645,6 +14649,7 @@ MonoBehaviour:
   endScreen: {fileID: 338780488}
   player: {fileID: 0}
   pm: {fileID: 0}
+  justRestarted: 1
 --- !u!65 &1449341264
 BoxCollider:
   m_ObjectHideFlags: 0

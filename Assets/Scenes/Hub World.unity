@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13998824, g: 0.44119993, b: 0.5149912, a: 1}
+  m_IndirectSpecularColor: {r: 0.13998824, g: 0.44120005, b: 0.5149913, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -717,6 +717,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneNum: 2
   player: {fileID: 0}
+  gm: {fileID: 0}
+  goal: {fileID: 0}
+  goalScript: {fileID: 0}
 --- !u!114 &76943403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -937,6 +940,7 @@ MonoBehaviour:
   lastCheckPointPos: {x: 13, y: -20.8, z: -107.9}
   player: {fileID: 0}
   pm: {fileID: 0}
+  _Dashing: {fileID: 0}
 --- !u!4 &94954022
 Transform:
   m_ObjectHideFlags: 0
@@ -991,6 +995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!114 &104201645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1003,6 +1008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!114 &104201646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1724,6 +1730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!114 &217195187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1736,6 +1743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!65 &217195188
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2439,6 +2447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!114 &253161484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2451,6 +2460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!65 &253161485
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2569,6 +2579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!114 &264430740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2581,6 +2592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!65 &264430741
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7747,7 +7759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5922607235690076204, guid: 2d67c56b71b2c674b866a683e79d0d07, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -174.54001
+      value: -697
       objectReference: {fileID: 0}
     - target: {fileID: 5922607235690076204, guid: 2d67c56b71b2c674b866a683e79d0d07, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9079,9 +9091,10 @@ MonoBehaviour:
   sign: {fileID: 691578127}
   dialogue:
     sentences:
-    - Are you heading to the red portal?
+    - The red portal is just up this tower.
     - I hear it leads to Rocket Jump levels.
-    - And if you beat them all, your Rocket Jump becomes stronger...
+    - But be careful you can only use your Rocket Jump in them.
+    - But if you beat them all, your Rocket Jump becomes stronger...
     - Well, best of luck!
     - 
   dialogueManager: {fileID: 2040579868}
@@ -9262,6 +9275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!114 &512948675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9274,6 +9288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!114 &512948676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26023,6 +26038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!114 &821387781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26035,6 +26051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!114 &821387782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37549,6 +37566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!114 &1111287250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37561,6 +37579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!114 &1111287251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37987,7 +38006,8 @@ MonoBehaviour:
   dialogue:
     sentences:
     - You're new, right? How're you holding up?
-    - Behind me is the blue portal. It brings you to Grapple Hook levels.
+    - Up on that platform is the blue portal. It brings you to Grapple Hook levels.
+    - Though you can only use Grapple Hook in them.
     - And apparently if you beat them all, your Grapple Hook improves.
     - I could totally get that upgrade myself, I just... don't feel like it is all...
     - 
@@ -38031,6 +38051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!114 &1150999306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38043,6 +38064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!114 &1150999307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38791,6 +38813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!114 &1265387538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38803,6 +38826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!114 &1265387539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38865,6 +38889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!114 &1275098838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38877,6 +38902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!65 &1275098839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40169,6 +40195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!114 &1423749885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40181,6 +40208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!114 &1423749886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41041,6 +41069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!114 &1518766194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41053,6 +41082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!114 &1518766195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41591,6 +41621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!114 &1581664277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41603,6 +41634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!114 &1581664278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41655,6 +41687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!114 &1594130237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41667,6 +41700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!114 &1594130238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42445,6 +42479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!114 &1737446467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42457,6 +42492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!114 &1737446468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42640,7 +42676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a0144c1563516e4a942b0fec86abf23, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.32
+      value: -28.11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a0144c1563516e4a942b0fec86abf23, type: 3}
       propertyPath: m_LocalPosition.y
@@ -42648,7 +42684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a0144c1563516e4a942b0fec86abf23, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -254.22
+      value: -248.26
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a0144c1563516e4a942b0fec86abf23, type: 3}
       propertyPath: m_LocalRotation.w
@@ -48797,7 +48833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d28664cb8b46f3543ad3ea1d51b7d1a9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.6
+      value: -23.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d28664cb8b46f3543ad3ea1d51b7d1a9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -48805,11 +48841,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d28664cb8b46f3543ad3ea1d51b7d1a9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -344.1
+      value: -349.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d28664cb8b46f3543ad3ea1d51b7d1a9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.30070582
+      value: 0.59130967
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d28664cb8b46f3543ad3ea1d51b7d1a9, type: 3}
       propertyPath: m_LocalRotation.x
@@ -48817,7 +48853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d28664cb8b46f3543ad3ea1d51b7d1a9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.953717
+      value: 0.8064446
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d28664cb8b46f3543ad3ea1d51b7d1a9, type: 3}
       propertyPath: m_LocalRotation.z
@@ -48829,7 +48865,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d28664cb8b46f3543ad3ea1d51b7d1a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 145
+      value: 107.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d28664cb8b46f3543ad3ea1d51b7d1a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -48889,6 +48925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d24ac58bd682de41a3ad06bc521a945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShaker: {fileID: 0}
 --- !u!114 &1951009714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48901,6 +48938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6ad748db547714bb8fe27a64090185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_surface: {fileID: 0}
 --- !u!114 &1951009715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48989,8 +49027,9 @@ MonoBehaviour:
   dialogue:
     sentences:
     - Oh, so you're the human...
-    - Are you off to the yellow portal?
+    - Are you off to the yellow portal behind me?
     - They say an upgrade to your Dash lies at the end of the third level.
+    - But you can only dash through those three levels.
     - But I don't know if I trust the rumours...
     - 
   dialogueManager: {fileID: 2040579868}
@@ -49458,7 +49497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f3e355a253bec064b93f5a2fb27b72e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 103.4
+      value: 111.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f3e355a253bec064b93f5a2fb27b72e2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -49466,7 +49505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f3e355a253bec064b93f5a2fb27b72e2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -250.82
+      value: -241.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f3e355a253bec064b93f5a2fb27b72e2, type: 3}
       propertyPath: m_LocalRotation.w
