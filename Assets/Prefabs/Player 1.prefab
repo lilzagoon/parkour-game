@@ -1028,6 +1028,7 @@ MonoBehaviour:
   GrappleClip: {fileID: 8300000, guid: 2b454c4ab5e24c14698f0efe3018dcd7, type: 3}
   rocketAnim: {fileID: 5079575835269983916}
   dialogueTrigger: {fileID: 0}
+  grappleCd: 0
   orientation: {fileID: 4129396048173162713}
   rb: {fileID: 4129396048688012198}
   horizontalThrustForce: 3000
@@ -1366,12 +1367,14 @@ MonoBehaviour:
   wallrunningSpeed: 20
   swingSpeed: 80
   movementUpgrades: 0
+  moveUpgraded: 0
   speedBonus: 10
   jumpForce: 35
   jumpCooldown: 0.25
   airMultiplier: 0.4
   jumpBonus: 15
   jumpUpgrades: 0
+  jumpUpgraded: 0
   crouchSpeed: 5
   crouchYScale: 1
   startYScale: 1.5
@@ -1385,8 +1388,12 @@ MonoBehaviour:
   grounded: 0
   maxSlopeAngle: 40
   isOnSlope: 0
+  grappleUpgrades: 0
+  dashUpgrades: 0
+  bombUpgrades: 0
   orientation: {fileID: 4129396048173162713}
   animeLines: {fileID: 5079575834560459944}
+  dashCdTimer: 0
   state: 0
   sprinting: 0
   dashing: 0
@@ -1394,6 +1401,9 @@ MonoBehaviour:
   swinging: 0
   coinsList: []
   coins: 0
+  blueUnlock: 0
+  pinkUnlock: 0
+  goldUnlock: 0
 --- !u!114 &5079575835460215783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1451,7 +1461,7 @@ MonoBehaviour:
   allowAllDirections: 1
   disableGravity: 1
   resetVel: 1
-  dashCd: 3
+  dashCd: 1
 --- !u!114 &4129396048688012199
 MonoBehaviour:
   m_ObjectHideFlags: 0

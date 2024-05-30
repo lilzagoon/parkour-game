@@ -202,7 +202,7 @@ public class PlayerMovementTwo : MonoBehaviour, IDataPersistence
         else
             rb.drag = 0;
 
-        if (moveSpeed > 42) animeLines.Play();
+        if (moveSpeed > 51) animeLines.Play();
         else animeLines.Stop();
 
     }
