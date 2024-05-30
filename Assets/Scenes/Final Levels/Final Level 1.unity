@@ -455,6 +455,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneNum: 12
   player: {fileID: 0}
+  gm: {fileID: 0}
+  goal: {fileID: 0}
+  goalScript: {fileID: 0}
 --- !u!114 &76943403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,6 +592,7 @@ MonoBehaviour:
   lastCheckPointPos: {x: 253, y: 0, z: 897}
   player: {fileID: 0}
   pm: {fileID: 0}
+  _Dashing: {fileID: 0}
 --- !u!4 &94954022
 Transform:
   m_ObjectHideFlags: 0
@@ -918,6 +922,7 @@ MonoBehaviour:
   endScreen: {fileID: 338780488}
   player: {fileID: 0}
   pm: {fileID: 0}
+  justRestarted: 1
 --- !u!65 &123351695
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2311,11 +2316,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e44ec703be0316d4e99fd98f83e49cbe, type: 3}
---- !u!1 &443602165 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4747214275901587366, guid: e44ec703be0316d4e99fd98f83e49cbe, type: 3}
-  m_PrefabInstance: {fileID: 443602164}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &449956395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4226,7 +4226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 443602165}
+  m_FirstSelected: {fileID: 557178514}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1008098086
