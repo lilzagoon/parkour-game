@@ -7,6 +7,8 @@ public class PlayerCam : MonoBehaviour
 {
     public float sensX;
     public float sensY;
+    public float controllerSensX = 60f;
+    public float controllerSensY = 60f;
 
     public Transform orientation;
     public Transform camHolder;
@@ -32,8 +34,8 @@ public class PlayerCam : MonoBehaviour
     {
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.fixedDeltaTime * sensX;
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.fixedDeltaTime * sensY;
-        float joystickX = Input.GetAxisRaw("HorizontalJ") * Time.fixedDeltaTime * sensX;
-        float joystickY = Input.GetAxisRaw("VerticalJ") * Time.fixedDeltaTime * sensY;
+        float joystickX = Input.GetAxisRaw("HorizontalJ") * Time.fixedDeltaTime * controllerSensX;
+        float joystickY = Input.GetAxisRaw("VerticalJ") * Time.fixedDeltaTime * controllerSensY;
 
         if (mouseX != 0 || mouseY != 0)
         {
